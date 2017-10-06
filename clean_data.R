@@ -164,7 +164,7 @@ plot(hurr_obs$pressure, hurr_obs$wind)
 # add decade
 hurr_obs$decade <- paste0(substring(year(hurr_obs$date_time), 1, 3), "0s")
 
-#add saffir simpson source_yale
+#add saffir simpson scale
 hurr_obs$category <- ifelse(hurr_obs$wind >= 137, "5",
                      ifelse(hurr_obs$wind >= 113 & hurr_obs$wind <= 136, "4",
                      ifelse(hurr_obs$wind >= 96 & hurr_obs$wind <= 112, "3",
@@ -208,6 +208,21 @@ highest_wind_storm_year <- hurr_obs %>%
 
 ggplot(highest_wind_year, aes(x = storm_year, y = highest_wind)) +
   geom_line() + geom_smooth(se = FALSE, span = 0.5)
+
+
+  highest_wind_year_mph <- hurr_obs %>%
+    dplyr::mutate(storm_year = year(date_time)) %>%
+    dplyr::group_by(storm_year) %>%
+    dplyr::summarize(highest_wind = max(mph, na.rm = TRUE))
+
+  highest_wind_storm_year_mph <- hurr_obs %>%
+    dplyr::mutate(storm_year = year(date_time)) %>%
+    dplyr::group_by(storm_year,storm_id) %>%
+    dplyr::summarize(highest_wind = max(mph, na.rm = TRUE))
+
+  ggplot(highest_wind_year_mph, aes(x = storm_year, y = highest_wind)) +
+    geom_line() + geom_smooth(se = FALSE, span = 0.5)
+
 
 # point plot of wind by year
 plot(highest_wind_year$storm_year,highest_wind_year$highest_wind)
