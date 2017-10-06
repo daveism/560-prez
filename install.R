@@ -1,0 +1,11 @@
+install.packages("stringr")
+install.packages("dplyr")
+install.packages("ggplot2")
+install.packages("tidyr")
+install.packages("lubridate")
+
+library(stringr)
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+library(lubridate)
