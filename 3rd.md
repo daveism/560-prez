@@ -3,8 +3,7 @@
 ## Lets look at what that created.
 
 ## Look at wind vs pressure for all basins
-![wind vs pressure for all basins](../blob/master/public_html/img/nokia.png?raw=true)
-
+![wind vs pressure for all basins](560-prez/blob/master/charts/all_scatter_pressure_wind.png?raw=true)
 
 #### look at wind vs pressure of each basin
 Western Atlantic
