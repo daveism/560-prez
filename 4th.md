@@ -13,12 +13,12 @@ Next let's look at the same thing for the Eastern Pacific and Western Pacific.
 #### look at wind vs pressure of each basin
 Western Atlantic
 ***Wind vs pressure for Western Atlantic***
-![wind vs pressure for Western Atlantic](../master/charts/Western Atlantic_scatter_pressure_wind.png?raw=true)
+![wind vs pressure for Western Atlantic](../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true)
 
 
 Eastern Pacific
 ***Wind vs pressure for Eastern Pacific***
-![wind vs pressure for Eastern Pacific](../master/charts/Eastern Pacific_scatter_pressure_wind.png?raw=true)
+![wind vs pressure for Eastern Pacific](../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true)
 
 
 [Next page](5th.md) | [Last page](last.md)
