@@ -4,7 +4,7 @@
 # Here we work through some really great ways to convert the data
 # borrowed from  https://geanders.github.io/RProgrammingForResearch/entering-and-cleaning-data-3.html
 
-create_meta_data <- function(hurr_tracks, basin){
+create_meta_data <- function(hurr_tracks, basin, basinid){
 
   # split data into arrays by commas
   hurr_tracks <- lapply(hurr_tracks, str_split, pattern = ",", simplify = TRUE)
@@ -30,6 +30,15 @@ create_meta_data <- function(hurr_tracks, basin){
   # get rid of spaces (trailing and leading in storm name make observatons numeric)
   hurr_meta <- dplyr::mutate(hurr_meta, storm_name = str_trim(storm_name), n_obs = as.numeric(n_obs))
   hurr_meta$basin <- basin
+  hurr_meta$basinid <- basinid
+  hurr_meta$year <- str_sub(hurr_meta$storm_id, -4, -1)
+
+  hurr_meta$num_id <- as.numeric(
+      paste(
+          paste(str_sub(hurr_meta$storm_id, -4, -1),
+          str_sub(hurr_meta$storm_id, -6, -5), sep = ""),
+        hurr_meta$basinid,  sep=".")
+  )
 
 
   # get the number of observatons and repeat the storm id that number of observatons times
@@ -38,11 +47,13 @@ create_meta_data <- function(hurr_tracks, basin){
   storm_id <- rep(hurr_meta$storm_id, times = hurr_meta$n_obs)
   storm_name <- rep(hurr_meta$storm_name, times = hurr_meta$n_obs)
 
+  hurr_meta <- arrange(hurr_meta,desc(storm_id))
+
   return(hurr_meta)
 
 }
 
-create_obs_data <- function(hurr_tracks, hurr_meta, basin){
+create_obs_data <- function(hurr_tracks, hurr_meta, basin, basinid){
 
   # split data into arrays by commas
   hurr_tracks <- lapply(hurr_tracks, str_split, pattern = ",", simplify = TRUE)
@@ -61,15 +72,24 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin){
 
   # prepare the hurrican obervation data from conversion to data frames
   hurr_obs <- lapply(hurr_obs, tibble::as_tibble)
-  hurr_obs <- dplyr::bind_rows(hurr_obs)
+  hurr_obs <- dplyr::bind_rows(hurr_obs) %>%
+  dplyr::mutate(storm_id = storm_id,storm_name = storm_name)
 
   #add the storm id
-  hurr_obs <- dplyr::mutate(hurr_obs,storm_id = storm_id)
+  # hurr_obs <- dplyr::mutate(hurr_obs,storm_id = storm_id)
 
   #add storm name
-  hurr_obs <- dplyr::mutate(hurr_obs,storm_name = storm_name)
+  # hurr_obs <- dplyr::mutate(hurr_obs,storm_name = storm_name)
 
   hurr_obs$basin <- basin
+  hurr_obs$basinid <- basinid
+  hurr_obs$num_id <- as.numeric(
+      paste(
+          paste(str_sub(hurr_obs$storm_id, -4, -1),
+          str_sub(hurr_obs$storm_id, -6, -5), sep = ""),
+        hurr_obs$basinid,  sep=".")
+  )
+
 
   #rename fields to something meaningfull
   hurr_obs <- dplyr::rename(hurr_obs, date = V1, record_indentifer = V3, time = V2, status = V4, latitude = V5,longitude = V6, wind_knts = V7, pressure = V8)
@@ -181,6 +201,10 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin){
   #add mph
   hurr_obs$wind_mph <- as.numeric((hurr_obs$wind_knts * 6076)/5280)
 
+  basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
+  basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
+
+  hurr_obs <- arrange(hurr_obs,desc(storm_id))
 
   return(hurr_obs)
 }

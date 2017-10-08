@@ -14,13 +14,13 @@ hurr_tracks_atlantic <- readLines(tracks_url_atlantic)
 hurr_tracks_pacific <- readLines(tracks_url_pacific)
 
 #Atlantic
-atlantic_meta_data <- create_meta_data(hurr_tracks_atlantic, "Western Atlantic")
-atlantic_obs_data <- create_obs_data(hurr_tracks_atlantic, atlantic_meta_data, "Western Atlantic")
+atlantic_meta_data <- create_meta_data(hurr_tracks_atlantic, "Western Atlantic", 1)
+atlantic_obs_data <- create_obs_data(hurr_tracks_atlantic, atlantic_meta_data, "Western Atlantic", 2)
 atlantic_meta_data <- append_meta_data(atlantic_obs_data, atlantic_meta_data)
 
 #Pacific
-pacific_meta_data <- create_meta_data(hurr_tracks_pacific, "Eastern Pacific")
-pacific_obs_data <- create_obs_data(hurr_tracks_pacific, pacific_meta_data, "Eastern Pacific")
+pacific_meta_data <- create_meta_data(hurr_tracks_pacific, "Eastern Pacific", 2)
+pacific_obs_data <- create_obs_data(hurr_tracks_pacific, pacific_meta_data, "Eastern Pacific", 2)
 pacific_meta_data <- append_meta_data(pacific_obs_data, pacific_meta_data)
 
 #append datasets
