@@ -7,7 +7,7 @@ Then open R studio
 
 in r studio
 
-Update the location of the Hurdata2 in [GitHub](http://github.com)
+Update the location of the Hurdata2 in [get_data.R](get_data.R#L7-L8)
 
 ```R
 source('THE REPO LOCATION\560-prez\run_hurr.R')\
