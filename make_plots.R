@@ -10,6 +10,7 @@ for (huricane in hurr_meta$storm_id){
   map_image <- paste( hur$basin, paste(hur$storm_name, paste("track_map", "png", sep="."), sep="_" ), sep="_" )
   map_image <- file.path(maps_storm_dir, map_image)
   map_image <- map_image[1]
+  chart_image <- gsub(" ", "_", map_image)
   ggsave(map_image, map_track, width=4, height=3)
 
 }
@@ -36,6 +37,7 @@ for (huricane in hurr_meta$storm_id){
     chart_image <- paste( hur$basin, paste(hur$storm_name, paste("wind", "png", sep="."), sep="_" ), sep="_" )
     chart_image <- file.path(charts_storm_dir, chart_image)
     chart_image <- chart_image[1]
+    chart_image <- gsub(" ", "_", chart_image)
     ggsave(chart_image, bar_time_winds, width=5, height=3)
 
 
@@ -61,6 +63,7 @@ chartWindvsPressure <- ggScatterAuto(hurr_obs,
 chart_image <- paste("all", paste("scatter_pressure_wind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, chartWindvsPressure, width=4, height=3)
 
 
@@ -78,6 +81,7 @@ allyearwind <- ggScatterAutoNoR(hurr_meta,
 chart_image <- paste("all", paste("scatter_strom_wind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, allyearwind, width=5, height=3)
 
 #storm vs wind
@@ -94,6 +98,7 @@ allyearwindZoom <- ggScatterAutoNoRLim(hurr_meta,
 chart_image <- paste("all", paste("scatter_strom_wind_zoom", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, allyearwindZoom, width=5, height=3)
 
 
@@ -111,6 +116,7 @@ BarYearWind <- ggBarMaxAll(
 chart_image <- paste("All", paste("bar_storm_maxwind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, BarYearWind, width=4, height=3)
 
 meta_hurr_1050 <- subset(hurr_meta, hurr_meta$basin == basin[1] & hurr_meta$year >= 1950)
@@ -129,6 +135,7 @@ allyearwind_1950 <- ggScatterAutoNoR(meta_hurr_1050,
 chart_image <- paste("all", paste("scatter_strom_wind_1950", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, allyearwind_1950, width=5, height=3)
 
 Chart_BarYearWind_1950 <- ggBarMaxAll(
@@ -143,6 +150,7 @@ Chart_BarYearWind_1950 <- ggBarMaxAll(
 chart_image <- paste("All", paste("bar_storm_maxwind_1950", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, Chart_BarYearWind_1950, width=5, height=3)
 
 
@@ -173,6 +181,7 @@ for (basin in basins){
   chart_image <- paste(basin, paste("scatter_storm_wind", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, Chart_ScatterYearWind, width=4, height=3)
 
   #year wind
@@ -189,6 +198,7 @@ for (basin in basins){
   chart_image <- paste(basin, paste("scatter_storm_wind_zoom", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, Chart_ScatterYearWind_zoom, width=4, height=3)
 
 
@@ -205,6 +215,7 @@ for (basin in basins){
   chart_image <- paste(basin, paste("bar_storm_maxwind", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, Chart_BarYearWind, width=4, height=3)
 
 
@@ -222,6 +233,7 @@ for (basin in basins){
   chart_image <- paste(basin, paste("scatter_pressure_wind", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
 }
 
@@ -253,6 +265,7 @@ for (basin in basins){
   chart_image <- paste(basin, paste("scatter_storm_wind_1950", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, Chart_ScatterYearWind, width=4, height=3)
 
   Chart_BarYearWind <- ggBarMaxAll(
@@ -267,6 +280,7 @@ for (basin in basins){
   chart_image <- paste(basin, paste("bar_storm_maxwind_1950", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, Chart_BarYearWind, width=4, height=3)
 
 
@@ -284,5 +298,6 @@ for (basin in basins){
   chart_image <- paste(basin, paste("scatter_pressure_wind_1950", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
+  chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
 }
