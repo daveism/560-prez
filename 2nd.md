@@ -1,62 +1,19 @@
 
-First page | Last page
+[First page](start.md) | [Previous page](start.md)
 ## Getting Started
+
 First you will have to clone or download this repository.
 
-Then open R studio
+In a text editor
+* Update the location of the Hurdata2 in [get_data.R](get_data.R#L7-L8)
 
-in r studio
-
-Update the location of the Hurdata2 in [get_data.R](get_data.R#L7-L8)
+Open R studio
+*change THE REPO LOCATION to the location you downloaded or cloned the repository*
 
 ```R
 source('THE REPO LOCATION\560-prez\run_hurr.R')\
 ```
 
-This wil
-## Import the data
+This will load, clean, create charts, create maps, and create csv's from the hurdat2 data.  
 
-## Clean the data
-
-#Second Page
-## Look at wind vs pressure for both
-
-
-#### look at wind vs pressure of each basin
-Western Atlantic
-
-
-Eastern Pacific
-
-after 1950
-
-
-#Third Page
-## Look at Max wind per storm for each basin
-
-#### Look at Max wind per storm
-Western Atlantic
-
-
-Eastern Pacific
-
-after 1950
-
-
-#fourth Page
-## Bar chart of Max wind per strom
-
-#### Bar chart of Max wind per strom for each basin
-Western Atlantic
-
-
-Eastern Pacific
-
-
-after 1950
-
-
-#fitfh Page
-## tracks by storm
-
-## wind by storm
+[Next page](2nd.md) | [Last page](last.md)
