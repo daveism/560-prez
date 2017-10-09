@@ -8,7 +8,7 @@ data_dir <- "/Users/daveism/GitHub/560-prez/data"
 source("/Users/daveism/GitHub/560-prez/install.R")
 
 #source the functions
-source("/Users/daveism/GitHub/560-prez/clean_data.R")
+source("/Users/daveism/GitHub/560-prez/clean_data_functions.R")
 
 #get datasets
 source("/Users/daveism/GitHub/560-prez/get_data.R")
@@ -18,3 +18,6 @@ source("/Users/daveism/GitHub/560-prez/map_functions.R")
 
 #add map functions
 source("/Users/daveism/GitHub/560-prez/chart_functions.R")
+
+#write csvs
+source("/Users/daveism/GitHub/560-prez/write_csv.R")

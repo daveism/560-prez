@@ -9,10 +9,11 @@ In a text editor
 * Update the location of the Hurdata2 in [get_data.R](get_data.R#L7-L8)
 
 Open R studio
+
 *NOTE: change THE REPO LOCATION to the location you downloaded or cloned the repository*
 
 ```R
-source('THE REPO LOCATION\560-prez\run_hurr.R')\
+source('THE REPO LOCATION\560-prez\run_hurr.R')
 ```
 
 This will load, clean, create charts, create maps, and create csv's from the hurdat2 data so we can use it in some basic analysis.
