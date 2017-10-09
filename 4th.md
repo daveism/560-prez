@@ -1,23 +1,23 @@
 
 [First page](start.md) | [Previous page](3rd.md)
-## Lets look at what that created.
-The code generates a bunch of charts and maps we can use in some basic analysis lets take a look if wind speeds are trending up in Hurricanes.
+## Lets look at max wind speed in mph!
+I have added a bunch of extra data.  Like max wind speed and converting wind speed to MPH, because it's easier for me to relate to MPH.
 
-First lets take a look if the data makes sense.  First lets look at wind and pressure.  They should be related.
+### Bar Chart showing All storms and max wind speed
 
-***Wind vs pressure for all basins***
-![wind vs pressure for all basins](../master/charts/all_scatter_pressure_wind.png?raw=true)
+***Max wind speed for storms for all basins***
 
-Next let's look at the same thing for the Eastern Pacific and Western Pacific.
+<img alt="Max wind speed for storms for all basins" src="../master/charts/All_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
 
-#### look at wind vs pressure of each basin
+### Bar Chart showing All storms and max wind speed for the Eastern Pacific and Western Pacific.
 
-***Wind vs pressure for Western Atlantic***
-![wind vs pressure for Western Atlantic](../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true)
+***Max wind speed for storms for Western Atlantic***
 
-***Wind vs pressure for Eastern Pacific***
-![wind vs pressure for Eastern Pacific](../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true)
+<img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
 
+***Max wind speed for storms for Eastern Pacific***
+
+<img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
 
 [Next page](5th.md) | [Last page](last.md)
 

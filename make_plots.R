@@ -243,7 +243,6 @@ for (basin in basins){
 #############################
 ###Hurricane Charts by individual basins Since 1950 \n
 #############################
-basins <- unique(hurr_meta$basin)
 
 for (basin in basins){
   basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == basin[1] & hurr_meta$year >= 1950)
