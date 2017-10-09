@@ -9,15 +9,21 @@
 
 <img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 
+Looks like a definite relationship.
+
 ### Next let's look at the same relationships for the Eastern Pacific and Western Pacific.
 
 ***Wind vs pressure for Western Atlantic***
 
 <img alt="wind vs pressure for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 
+Looks like a definite relationship too.
+
 ***Wind vs pressure for Eastern Pacific***
 
 <img alt="wind vs pressure for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
+
+Looks like a definite relationship too.
 
 [Previous page](2nd.md) | [Next page](4th.md)
 
