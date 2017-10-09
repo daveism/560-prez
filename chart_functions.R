@@ -49,12 +49,15 @@ ggScatterAuto <-  function(data, xField, yField, method, title,
 ggScatterAutoNoR <-  function(data, xField, yField, method, title,
                        xLabel, yLabel, source){
 
+   m <- lm(yField ~ xField, data);
+   r2 <- format(summary(m)$r.squared, digits = 3)
+
   ggplot(data, aes(x = xField, y = yField)) +
   geom_point(color="#b2ddf2") +
   geom_smooth(method = method,color="#008fd5",se=0) +
   theme_minimal(base_size=9) +
   labs(title= paste(title),
-     subtitle="",
+     subtitle=paste("R-squared = ",r2),
      x=xLabel,
      y=yLabel,
      caption=paste("Source:",source)) +
@@ -65,13 +68,16 @@ ggScatterAutoNoR <-  function(data, xField, yField, method, title,
 ggScatterAutoNoRLim <-  function(data, xField, yField, method, title,
                        xLabel, yLabel, source){
 
+   m <- lm(yField ~ xField, data);
+   r2 <- format(summary(m)$r.squared, digits = 3)
+
   ggplot(data, aes(x = xField, y = yField)) +
   geom_point(color="#b2ddf2") +
   geom_smooth(method = method,color="#008fd5",se=0) +
   coord_cartesian(ylim = c(75, 150)) +
   theme_minimal(base_size=9) +
   labs(title= paste(title),
-     subtitle="",
+    subtitle=paste("R-squared = ",r2),
      x=xLabel,
      y=yLabel,
      caption=paste("Source:",source)) +
@@ -177,10 +183,8 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
 ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
-  # max_value <- as.numeric(max(unlist(xfield), na.rm = TRUE))
-  # min_value <- as.numeric(min(unlist(xfield), na.rm = TRUE))
-  #
-  # diff <- max_value - min_value
+  m <- lm(yfield ~ xfield, data);
+  r2 <- format(summary(m)$r.squared, digits = 3)
 
   ggplot(data, aes(x = xfield, y = yfield)) +
   geom_bar(stat = "identity", fill="grey", color="dark grey") +
