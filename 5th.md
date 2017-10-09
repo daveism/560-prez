@@ -7,7 +7,7 @@ Bar charts are great but I also want to see the scatter plot and see if there is
 
 ***Max wind speed for storms for all basins***
 
-<img alt="Max wind speed for storms for all basins" src="../master/charts/All_scatter_storm_wind.png?raw=true" width="75%" height="75%" >
+<img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind?raw=true" width="75%" height="75%" >
 
 ### Scatter Charts showing All storms and max wind speed for the Eastern Pacific and Western Pacific.
 
