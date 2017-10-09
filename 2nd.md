@@ -1,5 +1,6 @@
+[First page](start.md)
 
-[First page](start.md) | [Previous page](start.md)
+[Previous page](start.md) | [Next page](3rd.md)
 ## Getting Started
 
 First you will have to clone or download this repository.
@@ -16,4 +17,6 @@ source('THE REPO LOCATION\560-prez\run_hurr.R')\
 
 This will load, clean, create charts, create maps, and create csv's from the hurdat2 data so we can use it in some basic analysis.
 
-[Next page](2nd.md) | [Last page](last.md)
+[Previous page](start.md) | [Next page](3rd.md)
+
+[Last page](last.md)

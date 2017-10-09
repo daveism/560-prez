@@ -1,5 +1,6 @@
+[First page](start.md)
 
-[First page](start.md) | [Previous page](4th.md)
+[Previous page](4th.md) | [Next page](6th.md)
 ## Lets look at max wind speed in mph!
 Bar charts are great but I also want to see the scatter plot and see if there is anything else it reveals.
 
@@ -19,7 +20,9 @@ Bar charts are great but I also want to see the scatter plot and see if there is
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_storm_wind.png?raw=true" width="75%" height="75%" >
 
-[Next page](6th.md) | [Last page](last.md)
+[Previous page](4th.md) | [Next page](6th.md)
+
+[Last page](last.md)
 
 
 #fitfh Page
