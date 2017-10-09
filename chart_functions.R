@@ -169,7 +169,10 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
   ggplot(data) +
   geom_bar(aes(as.factor(xfield),  yfield),
-            position = "dodge", stat = "summary", fun.y = "mean",fill="grey", color="dark grey") +
+            position = "dodge", stat = "summary", fun.y = "max",fill="#b2ddf2", color="#b2ddf2") +
+  # scale_x_discrete(
+  #                 breaks = c(18501.1, 19001.1, 19501.1, 20001.1),
+  #                 labels = c("1850", "1900", "1950", "2000")) +
   # ggplot(data, aes(x = xfield, y=yfield)) +
   # geom_bar(stat="summary", fun.y="sum") +
   # geom_bar(stat = "identity",  position = "dodge") +
@@ -196,13 +199,12 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
 
   ggplot(data,aes(as.factor(xfield),  yfield)) +
-  geom_bar(position = "dodge", stat = "summary", fun.y = "mean",fill="grey", color="grey") +
-  # ggplot(data, aes(x = xfield, y = yfield)) +
-  #
-  # geom_bar(stat = "identity", fill="grey", color="dark grey") +
+  geom_bar(position = "dodge", stat = "summary", fun.y = "max", fill="#b2ddf2", color="#b2ddf2", alpha = 0.25) +
+  scale_x_discrete(
+                  breaks = c(185101.1, 190001.1, 193001.1, 195001.1, 196001.1, 197001.1, 198001.1,  199001.1, 200001.1, 201001.1),
+                  labels = c("1850",  "1900",   "1930",   "1950",  "1960",   "1970",  "1980",     "1990",    "2000",  "2010")) +
   geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
-  # stat_smooth(aes(x = xfield, y = yfield), # continuous x-axis
-  #             se = F, method = "loess", color="#008fd5")+
+  # , minor_breaks = seq(0, 4.8, 0.1)
   theme_minimal(base_size=9) +
    labs(title= paste(title),
         subtitle="",
@@ -211,10 +213,10 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
         caption=paste("Source:",source)) +
         theme(plot.subtitle = element_text(color="#666666"),
                  plot.caption = element_text(color="#AAAAAA", size=6),
-                 axis.text.x=element_blank(),
-                 axis.ticks.x=element_blank(),
+                #  axis.text.x=element_blank(),
+                #  axis.ticks.x=element_blank(),
                panel.grid.minor = element_blank(),
-             panel.grid.major = element_blank(),
+            #  panel.grid.major = element_line(color="grey60"),
            panel.background = element_blank())
 }
 
