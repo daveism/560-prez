@@ -7,7 +7,7 @@ First lets take a look if the data makes sense.  First lets look at wind and pre
 
 ***Wind vs pressure for all basins***
 
-<img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="50%" height="50%" >
+<img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 <!-- ![wind vs pressure for all basins](../master/charts/all_scatter_pressure_wind.png?raw=true | height=458 width=678) -->
 
 Next let's look at the same thing for the Eastern Pacific and Western Pacific.
