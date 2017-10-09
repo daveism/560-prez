@@ -193,9 +193,9 @@ basins <- unique(hurr_meta$basin)
 #
 
 
-for (basin in basins){
-  basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == basin )
-  basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == basin )
+for (thebasin in basins){
+  basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == thebasin )
+  basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == thebasin )
 
   basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
   basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
@@ -205,13 +205,13 @@ for (basin in basins){
     basin_meta_hurr$num_id,
     basin_meta_hurr$max_wind_mph,
     "lm",
-    "Storm and Max Wind",
+    paste("Storm and Max Wind", thebasin, sep = " - "),
     "Storm",
     "Max Wind MPH",
     "NOAA - Hurrdat2 data"
   )
 
-  chart_image <- paste(basin, paste("scatter_storm_wind", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("scatter_storm_wind", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
@@ -222,13 +222,13 @@ for (basin in basins){
     basin_meta_hurr$num_id,
     basin_meta_hurr$max_wind_mph,
     "lm",
-    "Storm and Max Wind",
+    paste("Storm and Max Wind", thebasin, sep = " - "),
     "Storm",
     "Max Wind MPH",
     "NOAA - Hurrdat2 data"
   )
 
-  chart_image <- paste(basin, paste("scatter_storm_wind_zoom", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("scatter_storm_wind_zoom", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
@@ -237,14 +237,14 @@ for (basin in basins){
 
   Chart_BarYearWind <- ggBarMaxAll(
     basin_meta_hurr,
-    paste("Hurricanes Max Wind by Storm", basin, sep = " - "),
+    paste("Hurricanes Max Wind by Storm", thebasin, sep = " - "),
     basin_meta_hurr$num_id,
     basin_meta_hurr$max_wind_mph,
     "Storm",
     "Max wind (MPH)",
     "NOAA - Hurrdat2 data"
   )
-  chart_image <- paste(basin, paste("bar_storm_maxwind", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("bar_storm_maxwind", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
@@ -256,19 +256,18 @@ for (basin in basins){
     basin_obs_hurr$pressure,
     basin_obs_hurr$wind_mph,
     "lm",
-    paste("Pressure and Wind", basin),
+    paste("Pressure and Wind", thebasin, sep = " - "),
     "Pressure",
     "Wind MPH",
     "NOAA - Hurrdat2 data"
   )
 
-  chart_image <- paste(basin, paste("scatter_pressure_wind", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("scatter_pressure_wind", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
 
-  Sys.sleep(10)
 }
 
 
@@ -277,9 +276,9 @@ for (basin in basins){
 ###Hurricane Charts by individual basins Since 1950 \n
 #############################
 
-for (basin in basins){
-  basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == basin & hurr_meta$year >= 1950)
-  basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == basin & hurr_obs$year >= 1950)
+for (thebasin in basins){
+  basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == thebasin & hurr_meta$year >= 1950)
+  basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == thebasin & hurr_obs$year >= 1950)
 
   basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
   basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
@@ -289,13 +288,13 @@ for (basin in basins){
     basin_meta_hurr$num_id,
     basin_meta_hurr$max_wind_mph,
     "lm",
-    "Storm and Max Wind Since 1950 \n",
+    paste("Storm and Max Wind Since 1950 \n", thebasin),
     "Storm",
     "Max Wind MPH",
     "NOAA - Hurrdat2 data"
   )
 
-  chart_image <- paste(basin, paste("scatter_storm_wind_1950", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("scatter_storm_wind_1950", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
@@ -303,14 +302,14 @@ for (basin in basins){
 
   Chart_BarYearWind <- ggBarMaxAll(
     basin_meta_hurr,
-    paste("Hurricanes Max Wind by Storm Since 1950 \n", basin, sep = " - "),
+    paste("Hurricanes Max Wind by Storm Since 1950 \n", thebasin),
     basin_meta_hurr$num_id,
     basin_meta_hurr$max_wind_mph,
     "Storm",
     "Max wind (MPH)",
     "NOAA - Hurrdat2 data"
   )
-  chart_image <- paste(basin, paste("bar_storm_maxwind_1950", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("bar_storm_maxwind_1950", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
@@ -322,18 +321,16 @@ for (basin in basins){
     basin_obs_hurr$pressure,
     basin_obs_hurr$wind_mph,
     "lm",
-    paste("Pressure and Wind Since 1950 \n", basin),
+    paste("Pressure and Wind Since 1950 \n", thebasin),
     "Pressure",
     "Wind MPH",
     "NOAA - Hurrdat2 data"
   )
 
-  chart_image <- paste(basin, paste("scatter_pressure_wind_1950", "png", sep="."), sep="_" )
+  chart_image <- paste(thebasin, paste("scatter_pressure_wind_1950", "png", sep="."), sep="_" )
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
-
-  Sys.sleep(10)
 
 }
