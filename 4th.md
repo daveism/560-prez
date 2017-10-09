@@ -9,7 +9,7 @@ I have added a bunch of extra data.  Like max wind speed and converting wind spe
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/All_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
 
-### Bar Chart showing All storms and max wind speed for the Eastern Pacific and Western Pacific.
+### Bar Charts showing All storms and max wind speed for the Eastern Pacific and Western Pacific.
 
 ***Max wind speed for storms for Western Atlantic***
 
