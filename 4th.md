@@ -12,6 +12,8 @@ I also added a field in the hurdata2 data that creates a storm id that uses the 
 
 Looks like a slight upward trend in the later years.  
 
+Maybe there is a difference in the two basins (Western Atlantic and Eastern Pacific)?
+
 ***Max wind speed for storms for Western Atlantic***
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
@@ -23,6 +25,8 @@ Looks like a slight upward trend in the later years also maybe a little greater.
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
 
 Looks like a slight upward trend in the later years also, but in this case it doesn't  look as steep as the Western Atlantic.
+
+Nice but maybe a scatter plot can reveal a little more?
 
 [Previous page](3rd.md) | [Next page](5th.md)
 

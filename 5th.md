@@ -4,13 +4,13 @@
 ## Lets look at max wind speed in mph!
 Bar charts are great but I also want to see the scatter plot and see if there is anything else it reveals.
 
-### Scatter Chart showing All storms and max wind speed
-
 ***Max wind speed for storms for all basins***
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind.png?raw=true" width="75%" height="75%" >
 
-### Scatter Charts showing All storms and max wind speed for the Eastern Pacific and Western Pacific.
+Looks like the slight upward trend is here also.
+
+A look at the two basins (Western Atlantic and Eastern Pacific) since it appears that there a some differences.
 
 ***Max wind speed for storms for Western Atlantic***
 
