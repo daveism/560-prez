@@ -1,7 +1,6 @@
 
 [First page](start.md) | [Previous page](2nd.md)
 ## Lets take a look at the Hurdata data!
-The code generates a bunch of charts and maps we can use in some basic analysis.
 
 ### First lets look at wind and pressure. They should be related.
 

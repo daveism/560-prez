@@ -14,6 +14,6 @@ Open R studio
 source('THE REPO LOCATION\560-prez\run_hurr.R')\
 ```
 
-This will load, clean, create charts, create maps, and create csv's from the hurdat2 data.  
+This will load, clean, create charts, create maps, and create csv's from the hurdat2 data so we can use it in some basic analysis.
 
 [Next page](2nd.md) | [Last page](last.md)
