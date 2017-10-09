@@ -14,10 +14,17 @@ Open R studio
 ```R
 source('THE REPO LOCATION\560-prez\run_hurr.R')
 ```
-The run_hurr.R script will do a whole lot of things for us.
-Install all packages [install.R](install.R)
+The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
+- Set some varriables
+- Install all the packages we need [install.R](install.R)
+- Load functions for cleaning the data [clean_data_functions.R](clean_data_functions.R)
+- Get, clean, and prepare the data [get_data.R](get_data.R)
+- Load functions to create maps [map_functions.R](map_functions.R)
+- Load functions to create charts [chart_functions.R](chart_functions.R)
+- Write csv data [write_csv.R](write_csv.R)
+- Create Plots [.R](.R)
 
-Next  will load, clean, create charts, create maps, and create csv's from the hurdat2 data so we can use it in some basic analysis.  The code that cleans the data is [clean_data_functions.R](clean_data_functions.R)
+- Create track maps and graphs [.R](.R).  This is not run automtically you will have to run this seperately and it takes a while. 
 
 
 [Previous page](start.md) | [Next page](3rd.md)
