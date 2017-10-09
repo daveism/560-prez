@@ -17,7 +17,7 @@ ggScatterSimple <-  function(data, xField, yField, method, title,
   theme_minimal(base_size=9) +
   coord_cartesian(ylim = c(lowerlimit, upperlimit)) +
   labs(title= paste(title),
-     subtitle=paste(paste(paste("R-squared = ",r2),", Pearsons:"),pearsons),
+     subtitle=paste("R-squared = ",r2),
      x=xLabel,
      y=yLabel,
      caption=paste("Source:",source)) +
@@ -38,7 +38,7 @@ ggScatterAuto <-  function(data, xField, yField, method, title,
   geom_smooth(method = method,color="#008fd5",se=0) +
   theme_minimal(base_size=9) +
   labs(title= paste(title),
-     subtitle=paste(paste(paste("R-squared = ",r2),", Pearsons:"),pearsons),
+    subtitle=paste("R-squared = ",r2),
      x=xLabel,
      y=yLabel,
      caption=paste("Source:",source)) +
@@ -101,7 +101,7 @@ ggScatterType <-  function(data, xField, yField, method, title,
   theme_minimal(base_size=base_size) +
   coord_cartesian(ylim = c(lowerlimit, upperlimit)) +
   labs(title= paste(title),
-       subtitle=paste(paste(paste("R-squared = ",r2),"\nPearsons:"),pearsons),
+      subtitle=paste("R-squared = ",r2),
        x=xLabel,
        y=yLabel,
        caption=paste("Source:",source)) +
@@ -125,7 +125,7 @@ ggScatterPt <-  function(data, xField, yField, method, title,
   theme_minimal(base_size=9) +
   coord_cartesian(ylim = c(lowerlimit, upperlimit)) +
   labs(title= paste(title),
-     subtitle=paste(paste(paste("R-squared = ",r2),", Pearsons:"),pearsons),
+    subtitle=paste("R-squared = ",r2),
      x=xLabel,
      y=yLabel,
      caption=paste("Source:",source)) +
@@ -149,7 +149,7 @@ ggScatterTotals <-  function(data, xField, yField, method, title,
   theme_minimal(base_size=9) +
   coord_cartesian(ylim = c(min_value, max_value)) +
   labs(title= paste(title),
-     subtitle=paste(paste(paste("R-squared = ",r2),", Pearsons:"),pearsons),
+    subtitle=paste("R-squared = ",r2),
      x=xLabel,
      y=yLabel,
      caption=paste("Source:",source)) +

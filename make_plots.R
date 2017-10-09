@@ -47,7 +47,7 @@ for (huricane in hurr_meta$storm_id){
 #############################
 ###Hurricane Charts all basins
 #############################
-hurr_meta <- arrange(hurr_meta,desc(storm_id))
+hurr_meta <- arrange(hurr_meta,desc(num_id))
 
 #pressure vs wind
 chartWindvsPressure <- ggScatterAuto(hurr_obs,
@@ -164,8 +164,8 @@ for (basin in basins){
   basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == basin[1] )
   basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == basin[1] )
 
-  basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
-  basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
+  basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
+  basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
 
   #year wind
   Chart_ScatterYearWind <- ggScatterAutoNoR(basin_meta_hurr,
@@ -202,7 +202,6 @@ for (basin in basins){
   ggsave(chart_image, Chart_ScatterYearWind_zoom, width=4, height=3)
 
 
-
   Chart_BarYearWind <- ggBarMaxAll(
     basin_meta_hurr,
     paste("Hurricanes Max Wind by Storm", basin, sep = " - "),
@@ -235,6 +234,8 @@ for (basin in basins){
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
+
+  Sys.sleep(2)
 }
 
 
@@ -248,8 +249,8 @@ for (basin in basins){
   basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == basin[1] & hurr_meta$year >= 1950)
   basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == basin[1] & hurr_obs$year >= 1950)
 
-  basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
-  basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
+  basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
+  basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
 
   #year wind
   Chart_ScatterYearWind <- ggScatterAutoNoR(basin_meta_hurr,
@@ -300,4 +301,7 @@ for (basin in basins){
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
+
+  Sys.sleep(2)
+
 }
