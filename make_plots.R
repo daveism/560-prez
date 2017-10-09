@@ -66,8 +66,8 @@ for (huricane in basin_obs_hurr$storm_id){
 #############################
 ###Hurricane Charts all basins
 #############################
-hurr_meta_sort <- arrange(hurr_meta,desc(num_id))
-hurr_obs_sort <- arrange(hurr_obs,desc(num_id))
+hurr_meta_sort <- arrange(hurr_meta,num_id)
+hurr_obs_sort <- arrange(hurr_obs,num_id)
 
 #pressure vs wind
 chartWindvsPressure <- ggScatterAuto(hurr_obs_sort,
@@ -217,8 +217,8 @@ for (thebasin in basins){
   basin_meta_hurr <- subset(hurr_meta_sort, hurr_meta_sort$basin == thebasin )
   basin_obs_hurr <- subset(hurr_obs_sort, hurr_obs_sort$basin == thebasin )
 
-  basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
-  basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
+  basin_meta_hurr <- arrange(basin_meta_hurr,num_id)
+  basin_obs_hurr <- arrange(basin_obs_hurr,num_id)
 
   #year wind
   Chart_ScatterYearWind <- ggScatterAutoNoR(basin_meta_hurr,
@@ -300,8 +300,8 @@ for (thebasin in basins){
   basin_meta_hurr <- subset(hurr_meta_sort, hurr_meta_sort$basin == thebasin & hurr_meta$year >= 1950)
   basin_obs_hurr <- subset(hurr_obs_sort, hurr_obs_sort$basin == thebasin & hurr_obs_sort$year >= 1950)
 
-  basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
-  basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
+  basin_meta_hurr <- arrange(basin_meta_hurr,num_id)
+  basin_obs_hurr <- arrange(basin_obs_hurr,num_id)
 
   #year wind
   Chart_ScatterYearWind <- ggScatterAutoNoR(basin_meta_hurr,
