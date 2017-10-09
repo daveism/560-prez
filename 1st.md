@@ -1,6 +1,7 @@
 [Next page](2nd.md)
-# Reproducible Research, Investigating Hurricanes with hurdat2 data and R
-I like the ideas behind reproducible research. Reproducible research simple means, anyone should be able to reproduce the results using the supplied methodology.  Mistakes can be corrected and the whole process can be updated and improved.
+# Investigating Hurricanes with hurdat2 data and R - Reproducible Research.
+
+Reproducible research simple means, anyone should be able to reproduce the results of your study.  This is accomplished many ways I really believe it should include the publishing of data and any code you used.   Anyone with the right motivation should be to get the same results as you.  More importantly, anyone should be able to provide feedback and improvements. 
 
 The following uses R and Github to import, clean, and investigate data associated with Hurricanes, while demonstrating one take on the practice of reproducible research.
 
