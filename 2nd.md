@@ -1,4 +1,4 @@
-[First page](start.md)
+[First page](1st.md)
 
 [Previous page](start.md) | [Next page](3rd.md)
 ## Getting Started
