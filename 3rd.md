@@ -1,6 +1,6 @@
 [First page](start.md)
 
-[Previous page](2nd.md) | [Next page](3rd.md)
+[Previous page](2nd.md) | [Next page](4th.md)
 ## Lets take a look at the Hurdata data!
 
 ### First lets look at wind and pressure. They should be related.
@@ -19,6 +19,6 @@
 
 <img alt="wind vs pressure for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 
-[Previous page](2nd.md) | [Next page](3rd.md)
+[Previous page](2nd.md) | [Next page](4th.md)
 
 [Last page](last.md)

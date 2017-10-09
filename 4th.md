@@ -1,6 +1,6 @@
 [First page](start.md)
 
-[Previous page](3rd.md) | [Next page](4th.md)
+[Previous page](3rd.md) | [Next page](5th.md)
 ## Lets look at max wind speed in mph!
 I have added a bunch of extra data.  Like max wind speed and converting wind speed to MPH, because it's easier for me to relate to MPH.
 
@@ -20,6 +20,6 @@ I have added a bunch of extra data.  Like max wind speed and converting wind spe
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="75%" height="75%" >
 
-[Previous page](3rd.md) | [Next page](4th.md)
+[Previous page](3rd.md) | [Next page](5th.md)
 
 [Last page](last.md)
