@@ -194,9 +194,15 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
   m <- lm(yfield ~ xfield, data);
   r2 <- format(summary(m)$r.squared, digits = 3)
 
-  ggplot(data, aes(x = xfield, y = yfield)) +
-  geom_bar(stat = "identity", fill="grey", color="dark grey") +
+
+  ggplot(data,aes(as.factor(xfield),  yfield)) +
+  geom_bar(position = "dodge", stat = "summary", fun.y = "mean",fill="grey", color="grey") +
+  # ggplot(data, aes(x = xfield, y = yfield)) +
+  #
+  # geom_bar(stat = "identity", fill="grey", color="dark grey") +
   geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
+  # stat_smooth(aes(x = xfield, y = yfield), # continuous x-axis
+  #             se = F, method = "loess", color="#008fd5")+
   theme_minimal(base_size=9) +
    labs(title= paste(title),
         subtitle="",
