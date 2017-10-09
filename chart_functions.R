@@ -163,12 +163,16 @@ ggScatterTotals <-  function(data, xField, yField, method, title,
           plot.caption = element_text(color="#AAAAAA", size=6))
 }
 
-geom_bar(stat="summary", fun.y="sum")
+# geom_bar(stat="summary", fun.y="sum")
 
 ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
-  ggplot(data, aes(x = xfield, y=yfield)) +
-  geom_bar(stat="summary", fun.y="max", fill="grey", color="dark grey") +
+  ggplot(data) +
+  geom_bar(aes(as.factor(xfield),  yfield),
+            position = "dodge", stat = "summary", fun.y = "mean",fill="grey", color="dark grey") +
+  # ggplot(data, aes(x = xfield, y=yfield)) +
+  # geom_bar(stat="summary", fun.y="sum") +
+  # geom_bar(stat = "identity",  position = "dodge") +
   # geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
   theme_minimal(base_size=9) +
    labs(title= paste(title),
@@ -177,7 +181,11 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
         y=ylabel,
         caption=paste("Source:",source)) +
         theme(plot.subtitle = element_text(color="#666666"),
-                 plot.caption = element_text(color="#AAAAAA", size=6))
+                 plot.caption = element_text(color="#AAAAAA", size=6),
+                 axis.text.x=element_text(angle=90, size=3),
+                 axis.ticks.x=element_blank(),
+               panel.grid.minor = element_blank(),
+           panel.background = element_blank())
 }
 
 

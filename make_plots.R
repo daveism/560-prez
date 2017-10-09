@@ -12,7 +12,7 @@ for (huricane in basin_meta_hurr$storm_id){
   # print(huricane)
   hur <- subset(basin_obs_hurr, basin_obs_hurr$storm_id == huricane )
 
-  title <- paste(hur$storm_name[1])
+  title <- paste(hur$storm_name[1], hur$year[1])
   map_track <- make_hurricane_track_maps(hur, title, "NOAA - Hurrdat2 data")
 
   # basinname <- gsub(" ", "_", basin)
@@ -46,7 +46,7 @@ for (huricane in basin_obs_hurr$storm_id){
     hur,
     paste( paste("Winds by Date for", hur$storm_name),  hur$year),
     hur$date_time,
-    hur$wind_mph,
+    format(hur$wind_mph, digits = 3),
     "Date Time",
     "Wind (MPH)",
     "NOAA - Hurrdat2 data"
@@ -57,7 +57,7 @@ for (huricane in basin_obs_hurr$storm_id){
     chart_image <- file.path(charts_storm_dir, chart_image)
     chart_image <- chart_image[1]
     chart_image <- gsub(" ", "_", chart_image)
-    ggsave(chart_image, bar_time_winds, width=5, height=3)
+    ggsave(chart_image, bar_time_winds, width=4, height=3, type = "cairo-png")
 
 
 }
@@ -297,7 +297,7 @@ for (thebasin in basins){
 #############################
 
 for (thebasin in basins){
-  basin_meta_hurr <- subset(hurr_meta_sort, hurr_meta_sort$basin == thebasin & hurr_meta_sort$year >= 1950)
+  basin_meta_hurr <- subset(hurr_meta_sort, hurr_meta_sort$basin == thebasin & hurr_meta$year >= 1950)
   basin_obs_hurr <- subset(hurr_obs_sort, hurr_obs_sort$basin == thebasin & hurr_obs_sort$year >= 1950)
 
   basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
