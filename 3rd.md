@@ -8,19 +8,17 @@ First lets take a look if the data makes sense.  First lets look at wind and pre
 ***Wind vs pressure for all basins***
 
 <img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
-<!-- ![wind vs pressure for all basins](../master/charts/all_scatter_pressure_wind.png?raw=true | height=458 width=678) -->
 
 Next let's look at the same thing for the Eastern Pacific and Western Pacific.
 
 #### look at wind vs pressure of each basin
 
 ***Wind vs pressure for Western Atlantic***
-![wind vs pressure for Western Atlantic](../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true)
+
+<img alt="wind vs pressure for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 
 ***Wind vs pressure for Eastern Pacific***
-![wind vs pressure for Eastern Pacific](../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true)
 
-
-
+<img alt="wind vs pressure for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 
 [Next page](4th.md) | [Last page](last.md)
