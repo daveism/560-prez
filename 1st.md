@@ -1,8 +1,11 @@
 [Next page](2nd.md)
-# Investigating Hurricanes with hurdat2 data and R
-I like to the ideas behind reproducible research. So lets use R and Github to import, clean, and investigate some basics with Hurricanes and demonstrate what that means.
+# Reproducible Research, Investigating Hurricanes with hurdat2 data and R
+I like the ideas behind reproducible research.  
 
-## update the hurdata2 data file name and location (if necessary).
+The following uses R and Github to import, clean, and investigate some basics with Hurricanes. While also demonstrating one take on accomplishing reproducible research.
+
+## A little backgound
+
 NOAA's National Hurricane Center publishes historical hurricane data in the hurdat2 format.
 The complete list of available data is here;
 http://www.aoml.noaa.gov/hrd/hurdat/Data_Storm.html
