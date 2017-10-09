@@ -117,7 +117,8 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
   }
 
   ggplot(data,aes(as.factor(xfield),  yfield)) +
-  geom_bar(position = "dodge", stat = "summary", fun.y = "max", fill="#b2ddf2", color="#b2ddf2", alpha = 0.25) +
+  geom_bar(position = "dodge", stat = "summary", fun.y = "max",
+           fill="#b2ddf2", color="#b2ddf2", size = .5) +
   scale_x_discrete(
                   breaks = b_breaks,
                   labels = b_labels) +
