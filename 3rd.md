@@ -6,6 +6,7 @@ The code generates a bunch of charts and maps we can use in some basic analysis 
 First lets take a look if the data makes sense.  First lets look at wind and pressure.  They should be related.
 
 ***Wind vs pressure for all basins***
+
 <img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="50%" height="50%" >
 <!-- ![wind vs pressure for all basins](../master/charts/all_scatter_pressure_wind.png?raw=true | height=458 width=678) -->
 
