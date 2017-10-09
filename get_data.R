@@ -7,7 +7,7 @@
 tracks_url_atlantic <- paste0("http://www.aoml.noaa.gov/hrd/hurdat/hurdat2-1851-2016-apr2017.txt")
 tracks_url_pacific <- paste0("http://www.aoml.noaa.gov/hrd/hurdat/hurdat2-nepac-1949-2016-apr2017.txt")
 
-source("/Users/daveism/GitHub/560-prez/clean_data.R")
+source("/Users/daveism/GitHub/560-prez/clean_data_functions.R")
 
 #import hurricane tracks into hurr_tracks
 hurr_tracks_atlantic <- readLines(tracks_url_atlantic)

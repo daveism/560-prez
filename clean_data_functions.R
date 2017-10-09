@@ -47,7 +47,7 @@ create_meta_data <- function(hurr_tracks, basin, basinid){
   storm_id <- rep(hurr_meta$storm_id, times = hurr_meta$n_obs)
   storm_name <- rep(hurr_meta$storm_name, times = hurr_meta$n_obs)
 
-  hurr_meta <- arrange(hurr_meta,desc(storm_id))
+  # hurr_meta <- arrange(hurr_meta,desc(storm_id))
 
   return(hurr_meta)
 
@@ -204,7 +204,7 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin, basinid){
   basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
   basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
 
-  hurr_obs <- arrange(hurr_obs,desc(storm_id))
+  # hurr_obs <- arrange(hurr_obs,desc(storm_id))
 
   return(hurr_obs)
 }
