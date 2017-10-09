@@ -122,7 +122,10 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
   scale_x_discrete(
                   breaks = b_breaks,
                   labels = b_labels) +
-  geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
+  # geom_line(aes(as.factor(xfield),  yfield)) +
+  # geom_line(aes(as.factor(xfield))) +
+  # geom_smooth(method = "loess") +
+  # geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
   # , minor_breaks = seq(0, 4.8, 0.1)
   theme_minimal(base_size=9) +
    labs(title= paste(title),
@@ -136,7 +139,8 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
                 #  axis.ticks.x=element_blank(),
                panel.grid.minor = element_blank(),
             #  panel.grid.major = element_line(color="grey60"),
-           panel.background = element_blank())
+           panel.background = element_blank()) 
+
 }
 
 
