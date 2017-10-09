@@ -1,23 +1,25 @@
-maps_dir <- "/Users/daveism/GitHub/560-prez/maps"
-maps_storm_dir <- "/Users/daveism/GitHub/560-prez/maps/storm"
-charts_dir <- "/Users/daveism/GitHub/560-prez/charts"
-charts_storm_dir <- "/Users/daveism/GitHub/560-prez/charts/storm"
-data_dir <- "/Users/daveism/GitHub/560-prez/data"
+repo_loc <- "/Users/daveism/GitHub/560-prez"
+
+maps_dir <- paste(repo_loc,"maps", sep = "/")
+maps_storm_dir <- paste(repo_loc,"maps","storm", sep = "/")
+charts_dir <- paste(repo_loc,"charts", sep = "/")
+charts_storm_dir <- paste(repo_loc,"charts","storm", sep = "/")
+data_dir <- paste(repo_loc,"data", sep = "/")
 
 #install packages and ref libraries
-source("/Users/daveism/GitHub/560-prez/install.R")
+source(paste(repo_loc,"install.R", sep = "/"))
 
 #source the functions
-source("/Users/daveism/GitHub/560-prez/clean_data_functions.R")
+source(paste(repo_loc,"clean_data_functions.R", sep = "/"))
 
 #get datasets
-source("/Users/daveism/GitHub/560-prez/get_data.R")
+source(paste(repo_loc,"get_data.R", sep = "/"))
 
 #add map functions
-source("/Users/daveism/GitHub/560-prez/map_functions.R")
+source(paste(repo_loc,"map_functions.R", sep = "/"))
 
-#add map functions
-source("/Users/daveism/GitHub/560-prez/chart_functions.R")
+#add chart functions
+source(paste(repo_loc,"chart_functions.R", sep = "/"))
 
 #write csvs
-source("/Users/daveism/GitHub/560-prez/write_csv.R")
+source(paste(repo_loc,"write_csv.R", sep = "/"))
