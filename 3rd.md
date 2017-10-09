@@ -9,9 +9,7 @@ First lets take a look if the data makes sense.  First lets look at wind and pre
 
 <img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="75%" height="75%" >
 
-Next let's look at the same thing for the Eastern Pacific and Western Pacific.
-
-#### look at wind vs pressure of each basin
+#### Next let's look at the same thing for the Eastern Pacific and Western Pacific.
 
 ***Wind vs pressure for Western Atlantic***
 
