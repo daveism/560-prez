@@ -5,7 +5,6 @@
 
 First you will have to clone or download this repository.
 
-You also need to change THE REPO LOCATION to the location you downloaded or cloned the repository.  This should be the path the folder.  
 
 ***Update Hurdat2***
 
@@ -14,7 +13,7 @@ If the Hurdat2 data has changed you will need to update the locations of the two
 
 ***Update repo***
 
-If the Hurdat2 data has changed you will need to update the locations of the two files in [run_hurr.R](run_hurr.R#L1).  
+You also need to change THE REPO LOCATION to the location you downloaded or cloned the repository.  This should be the path the folder in [run_hurr.R](run_hurr.R#L1).  
 
 Open R studio
 
