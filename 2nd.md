@@ -20,7 +20,7 @@ Open R studio
 source('THE REPO LOCATION YOU NEED TO UPDATE THIS\560-prez\run_hurr.R')
 ```
 The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
-- Set some variables
+- Sets some variables
 - Install all the packages we need [install.R](install.R)
 - Load functions for cleaning the data [clean_data_functions.R](clean_data_functions.R)
 - Get, clean, and prepare the data [get_data.R](get_data.R)
