@@ -5,7 +5,6 @@
 
 First, you will have to clone or download this repository.
 
-
 ***Update Hurdat2***
 
 If the Hurdat2 data has changed you will need to update the locations of the two files in [get_data.R](get_data.R#L7-L8).  
