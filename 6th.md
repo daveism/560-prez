@@ -8,9 +8,9 @@ Maybe the real increase is when hurricanes are intense.  maybe there is increase
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_major_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
 
-Looks max winds might be down slightly? 
+Looks max winds for intense hurricanse look like they are increasing. 
 
-Maybe there are any differences between the two basins.
+How about any differences between the two basins.
 
 ***Max wind speed for intense hurricanes for Western Atlantic***
 
