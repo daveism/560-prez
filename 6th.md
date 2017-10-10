@@ -12,7 +12,7 @@ source(paste(repo_loc,"charts_intense_all.R", sep = "/"))
 Then take a look at the intense hurricane data
 ```
 View(major_meta_hurr)
-View(major_obs_hurr
+View(major_obs_hurr)
 ```
 
 ***Max wind speed for intense hurricanes for all basins***
