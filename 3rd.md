@@ -6,7 +6,9 @@
 What's the top 10 hurricanse by max wind
 ```
 head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
+```
 
+```
    storm_name max_wind_mph min_pressure year
 1    PATRICIA     212.8902          872 2015
 2       ALLEN     189.8750          899 1980
@@ -23,7 +25,9 @@ head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind
 How about top 10 hurricanse by minimum pressure
 ```
 head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
+```
 
+```
    storm_name max_wind_mph min_pressure year
 1    PATRICIA     212.8902          872 2015
 2       WILMA     184.1212          882 2005
