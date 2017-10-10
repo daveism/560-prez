@@ -3,8 +3,9 @@
 [Previous page](2nd.md) | [Next page](4th.md)
 ## Verify it all worked
 
-
 I want to make sure things imported correctly so let's take a look at variables we know are related.  Pressure and Wind should be related.  Lower pressures generally should have higher winds.
+
+To create this chart run [charts_all.R](charts_all.R) in R studio.
 
 ***Wind vs pressure for all basins***
 
@@ -13,6 +14,8 @@ I want to make sure things imported correctly so let's take a look at variables 
 Looks like a definite relationship.
 
 We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships for both.
+
+To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studio.
 
 ***Wind vs pressure for Western Atlantic***
 
