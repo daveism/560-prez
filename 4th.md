@@ -2,7 +2,7 @@
 
 [Previous page](3rd.md) | [Next page](5th.md)
 ## Max wind speed overtime
-I have added a bunch of extra data to the datasets.  Data such as max wind speed and min wind for each storm
+I have added a bunch of extra data to the datasets.  Data such as max wind speed and minimum pressure for each storm
 
 Enter this and take a look at the storm summary data.
 ```
