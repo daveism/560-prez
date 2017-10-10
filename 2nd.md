@@ -5,7 +5,6 @@
 
 First, you will have to clone or download this repository.
 
-
 ***Update Hurdat2***
 
 If the Hurdat2 data has changed you will need to update the locations of the two files in [get_data.R](get_data.R#L7-L8).  
@@ -21,7 +20,7 @@ Open R studio
 source('THE REPO LOCATION YOU NEED TO UPDATE THIS\560-prez\run_hurr.R')
 ```
 The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
-- Set some variables
+- Sets some variables
 - Install all the packages we need [install.R](install.R)
 - Load functions for cleaning the data [clean_data_functions.R](clean_data_functions.R)
 - Get, clean, and prepare the data [get_data.R](get_data.R)
@@ -31,7 +30,7 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Create Plots [.R](.R)
 
 To Run Separately more on this later.
-These are not run automatically!  You will have to run this separately and it takes a while. 
+These are not run automatically!  You will want to run this separately and it takes a good amount of time, so if you have the time...
 - Create track maps  [run_hurr_track_charts.R](run_hurr_track_charts.R).  
 - Create Strom Wind graphs [run_hurr_track_charts.R](run_hurr_track_charts.R).
 

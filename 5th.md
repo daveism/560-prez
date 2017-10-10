@@ -4,6 +4,11 @@
 ## More on max wind speed in mph!
 Bar charts are great, but I want to see the scatter plot and see if there is anything happening we can't see in the bar charts.  
 
+To create this chart run [charts_all.R](charts_all.R) in R studio.
+```
+source(paste(repo_loc,"charts_all.R", sep = "/"))
+```
+
 ***Max wind speed for storms for all basins***
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
@@ -11,6 +16,11 @@ Bar charts are great, but I want to see the scatter plot and see if there is any
 Looks max winds might be down slightly? 
 
 Maybe there are any differences between the two basins.
+
+To create this chart run [charts_basins_all.R](charts_basins_all.R) in R studio.
+```
+source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
+```
 
 ***Max wind speed for storms for Western Atlantic***
 
