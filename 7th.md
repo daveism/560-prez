@@ -1,8 +1,20 @@
 [First page](1st.md)
 
 [Previous page](6th.md) | [Next page](last.md)
-## Wind Speed for Intense Hurricanes
-Maybe the real increase is when hurricanes are intense.  maybe there is increase in the max wind speed for the intense hurricanes any storm that is category 3 or higher.
+## Now for something kind of interesting
+For all of you that geek out on hurricanes here is a series if storm tracks for the Western Atlantic.
+
+You can run this your self using []() ***warning*** this will take a good amount of time, so grab a drink and sit back.
+```
+```
+
+then a graph of the date and wind speed (MPH)
+You can run this your self using []() ***warning*** this will take a good amount of time, so grab a drink and sit back.
+```
+```
+
+examples:
+
 
 ***Max wind speed for intense hurricanes for all basins***
 

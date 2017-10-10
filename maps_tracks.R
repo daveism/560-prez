@@ -12,7 +12,7 @@ for (huricane in basin_meta_hurr$storm_id){
   # print(huricane)
   hur <- subset(basin_obs_hurr, basin_obs_hurr$storm_id == huricane )
 
-  title <- paste(hur$storm_name[1], hur$year[1])
+  title <- paste(hur$storm_name[1])
   map_track <- make_hurricane_track_maps(hur, title, "NOAA - Hurrdat2 data")
 
   # basinname <- gsub(" ", "_", basin)
