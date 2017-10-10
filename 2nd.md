@@ -30,7 +30,7 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Create Plots [.R](.R)
 
 To Run Separately more on this later.
-These are not run automatically!  You will have to run this separately and it takes a while. 
+These are not run automatically!  You will want to run this separately and it takes a good amount of time, so if you have the time. 
 - Create track maps  [run_hurr_track_charts.R](run_hurr_track_charts.R).  
 - Create Strom Wind graphs [run_hurr_track_charts.R](run_hurr_track_charts.R).
 
