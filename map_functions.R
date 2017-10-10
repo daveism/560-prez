@@ -56,6 +56,21 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
         "Hurricane category 5" = "#c94227"
       )
 
+  storm_breaks <- c(
+        # "" = "#367b7f",
+        "Other low",
+        "Tropical depression",
+        "Tropical storm",
+        "Subtropical storm",
+        "Extratropical cyclone",
+        "Hurricane category 1",
+        "Extratropical cyclone category 1",
+        "Hurricane category 2",
+        "Hurricane category 3",
+        "Hurricane category 4",
+        "Hurricane category 5"
+      )
+
   ditch_the_axes <- theme(
   axis.text = element_blank(),
   axis.line = element_blank(),
@@ -69,7 +84,6 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
   track_map <- ggplot() +
     coord_fixed(1.3) +
     coord_fixed(xlim = c(-160, -10.0),  ylim = c(60, 00)) +
-    # coord_fixed(xlim = c(-storm_max_long, storm_min_long), ylim = c(storm_max_lat, storm_min_lat), ratio = 1.5) +
     wrld  +
     theme(panel.background = element_rect(fill='lightblue')) +
     geom_path(data = hur,
@@ -78,28 +92,8 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
                   color = map_status),
                   size = 1,
             linejoin = "mitre", lineend = "round") +
-     scale_color_manual(values = storm_color) +
+     scale_color_manual(breaks = storm_breaks, values = storm_color) +
      labs(color="Storm Level")  +
-    # geom_path(data = hur,
-    #           aes(x = -longitude, y = latitude,
-    #               group = num_id,
-    #               color = status,
-    #               size = wind_mph),
-    #         linejoin = "mitre", lineend = "round") +
-      # scale_color_gradientn(colours = rainbow(7), breaks = seq(25, 200, by = 25))
-    # geom_path(data = hur,
-    #          aes(x = -longitude, y = latitude,
-    #              group = NULL, color = status,
-    #              linejoin = "mitre", lineend = "butt",
-    # #              size = (wind_mph/10)), alpha = 0.5) +
-    # geom_path(data = hur,
-    #          aes(x = -longitude, y = latitude,
-    #              group = NULL)) +
-  #   geom_point(data = hur,
-  #            aes(x = -longitude, y = latitude,
-  #                group = NULL, color = status,
-  #                size = wind_mph), alpha = 0.5) +
-   guides(row=guide_legend(nrow=2)) +
    theme_minimal(base_size=theme_base_size) +
    ditch_the_axes +
    theme(panel.background = element_rect(fill='lightblue')) +
