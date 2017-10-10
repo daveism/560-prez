@@ -9,6 +9,12 @@ To create this chart run [charts_intense_all.R](charts_intense_all.R) in R studi
 source(paste(repo_loc,"charts_intense_all.R", sep = "/"))
 ```
 
+Then take a look at the intense hurricane data
+```
+View(major_meta_hurr)
+View(major_obs_hurr
+```
+
 ***Max wind speed for intense hurricanes for all basins***
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_major_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
