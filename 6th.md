@@ -1,10 +1,31 @@
 [First page](1st.md)
 
-[Previous page](4th.md) | [Next page](7th.md)
-Coding some outputs we can output all kinds of stuff like hurricane tracks and windspeed
+[Previous page](5th.md) | [Next page](7th.md)
+## Wind Speed for Intense Hurricanes
+Maybe the real increase is when hurricanes are intense.  maybe there is increase in the max wind speed for the intense hurricanes any storm that is category 3 or higher. 
+
+***Max wind speed for intense hurricanes for all basins***
+
+<img alt="Max wind speed for storms for all basins" src="../master/charts/all_major_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
+
+Looks max winds might be down slightly? 
+
+Maybe there are any differences between the two basins.
+
+***Max wind speed for intense hurricanes for Western Atlantic***
+
+<img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind_zoom.png?raw=true" width="60%" height="60%" >
+
+In the Western Atlantic, it looks down? I am surprised.
+
+***Max wind speed for intense hurricanes for Eastern Pacific***
+
+<img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
+
+In the Eastern Pacific, it looks slightly up?
 
 
 
-[Previous page](4th.md) | [Next page](7th.md)
+[Previous page](5th.md) | [Next page](7th.md)
 
 [Last page](last.md)
