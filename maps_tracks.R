@@ -24,6 +24,6 @@ for (huricane in basin_meta_hurr$storm_id){
   map_image <- file.path(maps_storm_dir, map_image)
   map_image <- map_image[1]
   chart_image <- gsub(" ", "_", map_image)
-  ggsave(map_image, map_track, width=4, height=3)
+  ggsave(map_image, map_track, width=image_width, height=image_height)
 
 }

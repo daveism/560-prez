@@ -27,7 +27,7 @@ for (huricane in basin_obs_hurr$storm_id){
     chart_image <- file.path(charts_storm_dir, chart_image)
     chart_image <- chart_image[1]
     chart_image <- gsub(" ", "_", chart_image)
-    ggsave(chart_image, bar_time_winds, width=4, height=3, type = "cairo-png")
+    ggsave(chart_image, bar_time_winds, width=image_width, height=image_height, type = "cairo-png")
 
 
 }

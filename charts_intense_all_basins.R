@@ -32,7 +32,7 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, Chart_ScatterYearWindmajor, width=4, height=3)
+  ggsave(chart_image, Chart_ScatterYearWindmajor, width=image_width, height=image_height)
 
   #year wind
   Chart_ScatterYearWindmajor_zoom <- ggScatterAutoNoRLimMajor(basin_meta_hurr,
@@ -49,7 +49,7 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, Chart_ScatterYearWindmajor_zoom, width=4, height=3)
+  ggsave(chart_image, Chart_ScatterYearWindmajor_zoom, width=image_width, height=image_height)
 
 
   Chart_BarYearWindmajor <- ggBarMaxAll(
@@ -65,7 +65,7 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, Chart_BarYearWindmajor, width=4, height=3)
+  ggsave(chart_image, Chart_BarYearWindmajor, width=image_width, height=image_height)
 
 
   #pressure vs wind
@@ -83,6 +83,6 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, chartWindvsPressuremajor, width=4, height=3)
+  ggsave(chart_image, chartWindvsPressuremajor, width=image_width, height=image_height)
 
 }

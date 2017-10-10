@@ -25,7 +25,7 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, Chart_ScatterYearWind, width=4, height=3)
+  ggsave(chart_image, Chart_ScatterYearWind, width=image_width, height=image_height)
 
   Chart_BarYearWind <- ggBarMaxAll(
     basin_meta_hurr,
@@ -40,7 +40,7 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, Chart_BarYearWind, width=4, height=3)
+  ggsave(chart_image, Chart_BarYearWind, width=image_width, height=image_height)
 
 
   #pressure vs wind
@@ -58,6 +58,6 @@ for (thebasin in basins){
   chart_image <- file.path(charts_dir, chart_image)
   chart_image <- chart_image[1]
   chart_image <- gsub(" ", "_", chart_image)
-  ggsave(chart_image, chartWindvsPressure, width=4, height=3)
+  ggsave(chart_image, chartWindvsPressure, width=image_width, height=image_height)
 
 }

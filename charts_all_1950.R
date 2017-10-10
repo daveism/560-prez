@@ -18,7 +18,7 @@ chart_image <- paste("all", paste("scatter_strom_wind_1950", "png", sep="."), se
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
-ggsave(chart_image, allyearwind_1950, width=5, height=3)
+ggsave(chart_image, allyearwind_1950, width=image_xwidth, height=image_height)
 
 Chart_BarYearWind_1950 <- ggBarMaxAll(
   meta_hurr_1050,
@@ -33,4 +33,4 @@ chart_image <- paste("All", paste("bar_storm_maxwind_1950", "png", sep="."), sep
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
-ggsave(chart_image, Chart_BarYearWind_1950, width=5, height=3)
+ggsave(chart_image, Chart_BarYearWind_1950, width=image_xwidth, height=image_height)

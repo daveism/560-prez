@@ -23,7 +23,7 @@ chart_image <- paste("all", paste("scatter_pressure_wind", "png", sep="."), sep=
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
-ggsave(chart_image, chartWindvsPressure, width=4, height=3)
+ggsave(chart_image, chartWindvsPressure, width=image_width, height=image_height)
 
 
 #storm vs wind
@@ -41,7 +41,7 @@ chart_image <- paste("all", paste("major_scatter_strom_wind", "png", sep="."), s
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
-ggsave(chart_image, allyearwindmajor, width=5, height=3)
+ggsave(chart_image, allyearwindmajor, width=image_xwidth, height=image_height)
 
 #storm vs wind
 allyearwindZoommajor  <- ggScatterAutoNoRLimMajor(major_meta_hurr_sort,
@@ -58,7 +58,7 @@ chart_image <- paste("all", paste("scatter_major_strom_wind_zoom", "png", sep=".
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
-ggsave(chart_image, allyearwindZoommajor , width=5, height=3)
+ggsave(chart_image, allyearwindZoommajor , width=image_xwidth, height=image_height)
 
 
 
@@ -76,4 +76,4 @@ chart_image <- paste("All", paste("bar_storm_major _maxwind", "png", sep="."), s
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
-ggsave(chart_image, BarYearWindmajor, width=4, height=3)
+ggsave(chart_image, BarYearWindmajor, width=image_width, height=image_height)

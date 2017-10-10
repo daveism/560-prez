@@ -6,6 +6,12 @@ charts_dir <- paste(repo_loc,"charts", sep = "/")
 charts_storm_dir <- paste(repo_loc,"charts","storm", sep = "/")
 data_dir <- paste(repo_loc,"data", sep = "/")
 
+#image defaults
+theme_base_size <- 9
+image_width <- 4
+image_xwidth <- 5
+image_height <- 3
+
 #install packages and ref libraries
 source(paste(repo_loc,"install.R", sep = "/"))
 

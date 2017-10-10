@@ -14,7 +14,7 @@ ggScatterAuto <-  function(data, xField, yField, method, title,
   ggplot(data, aes(x = xField, y = yField)) +
   geom_point(color="#b2ddf2") +
   geom_smooth(method = method,color="#008fd5",se=0) +
-  theme_minimal(base_size=9) +
+  theme_minimal(base_size=theme_base_size) +
   labs(title= paste(title),
     subtitle=paste("R-squared = ",r2),
      x=xLabel,
@@ -33,7 +33,7 @@ ggScatterAutoNoR <-  function(data, xField, yField, method, title,
   ggplot(data, aes(x = xField, y = yField)) +
   geom_point(color="#b2ddf2") +
   geom_smooth(method = method,color="#008fd5",se=0) +
-  theme_minimal(base_size=9) +
+  theme_minimal(base_size=theme_base_size) +
   labs(title= paste(title),
      subtitle=paste("R-squared = ",r2),
      x=xLabel,
@@ -53,7 +53,7 @@ ggScatterAutoNoRLim <-  function(data, xField, yField, method, title,
   geom_point(color="#b2ddf2") +
   geom_smooth(method = method,color="#008fd5",se=0) +
   coord_cartesian(ylim = c(75, 150)) +
-  theme_minimal(base_size=9) +
+  theme_minimal(base_size=theme_base_size) +
   labs(title= paste(title),
     subtitle=paste("R-squared = ",r2),
      x=xLabel,
@@ -73,7 +73,7 @@ ggScatterAutoNoRLimMajor <-  function(data, xField, yField, method, title,
   geom_point(color="#b2ddf2") +
   geom_smooth(method = method,color="#008fd5",se=0) +
   coord_cartesian(ylim = c(100, 210)) +
-  theme_minimal(base_size=9) +
+  theme_minimal(base_size=theme_base_size) +
   labs(title= paste(title),
     subtitle=paste("R-squared = ",r2),
      x=xLabel,
@@ -95,7 +95,7 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
   # geom_bar(stat="summary", fun.y="sum") +
   # geom_bar(stat = "identity",  position = "dodge") +
   # geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
-  theme_minimal(base_size=9) +
+  theme_minimal(base_size=theme_base_size) +
    labs(title= paste(title),
         subtitle="",
         x=xlabel,
@@ -146,7 +146,7 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
   # geom_smooth(method = "loess") +
   # geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
   # , minor_breaks = seq(0, 4.8, 0.1)
-  theme_minimal(base_size=9) +
+  theme_minimal(base_size=theme_base_size) +
    labs(title= paste(title),
         subtitle="",
         x=xlabel,

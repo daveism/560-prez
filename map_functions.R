@@ -46,7 +46,7 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
              aes(x = -longitude, y = latitude,
                  group = NULL, color = status,
                  size = wind_mph), alpha = 0.5) +
-   theme_minimal(base_size=9) +
+   theme_minimal(base_size=theme_base_size) +
    ditch_the_axes +
    theme(panel.background = element_rect(fill='lightblue')) +
    labs(x = NULL,
