@@ -4,7 +4,7 @@
 
 # Your Turn!
 
-Using this guide dive into the data or just grab the data
+Using this guide dive into the data or just grab the data @
 - Hurricane details: [hurricanes_detail.csv](data/hurricanes_detail.csv)
 - Hurricane summarries: [hurricanes_summary.csv](data/hurricanes_summary.csv)
 
