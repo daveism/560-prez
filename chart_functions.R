@@ -63,6 +63,25 @@ ggScatterAutoNoRLim <-  function(data, xField, yField, method, title,
           plot.caption = element_text(color="#AAAAAA", size=6))
 }
 
+ggScatterAutoNoRLimMajor <-  function(data, xField, yField, method, title,
+                       xLabel, yLabel, source){
+
+   m <- lm(yField ~ xField, data);
+   r2 <- format(summary(m)$r.squared, digits = 3)
+
+  ggplot(data, aes(x = xField, y = yField)) +
+  geom_point(color="#b2ddf2") +
+  geom_smooth(method = method,color="#008fd5",se=0) +
+  coord_cartesian(ylim = c(100, 210)) +
+  theme_minimal(base_size=9) +
+  labs(title= paste(title),
+    subtitle=paste("R-squared = ",r2),
+     x=xLabel,
+     y=yLabel,
+     caption=paste("Source:",source)) +
+     theme(plot.subtitle = element_text(color="#666666"),
+          plot.caption = element_text(color="#AAAAAA", size=6))
+}
 
 ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
@@ -139,7 +158,7 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
                 #  axis.ticks.x=element_blank(),
                panel.grid.minor = element_blank(),
             #  panel.grid.major = element_line(color="grey60"),
-           panel.background = element_blank()) 
+           panel.background = element_blank())
 
 }
 

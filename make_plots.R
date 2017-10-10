@@ -179,39 +179,6 @@ ggsave(chart_image, Chart_BarYearWind_1950, width=5, height=3)
 ###Hurricane Charts by individual basins
 #############################
 basins <- unique(hurr_meta_sort$basin)
-#
-# basins <- unique(hurr_meta_sort$basin)
-# for (basin in basins){
-#   print(basin)
-#   print("Test")
-# }
-#
-#
-# basin_meta_hurr <- subset(hurr_meta_sort, hurr_meta_sort$basin == 'Eastern Pacific' )
-# basin_obs_hurr <- subset(hurr_obs_sort, hurr_obs_sort$basin == 'Eastern Pacific' )
-#
-# basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
-# basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
-#
-#
-# #year wind
-# Chart_ScatterYearWind <- ggScatterAutoNoR(basin_meta_hurr,
-#   basin_meta_hurr$num_id,
-#   basin_meta_hurr$max_wind_mph,
-#   "lm",
-#   "Storm and Max Wind",
-#   "Storm",
-#   "Max Wind MPH",
-#   "NOAA - Hurrdat2 data"
-# )
-#
-# chart_image <- paste('Eastern Pacific', paste("scatter_storm_wind", "png", sep="."), sep="_" )
-# chart_image <- file.path(charts_dir, chart_image)
-# chart_image <- chart_image[1]
-# chart_image <- gsub(" ", "_", chart_image)
-# ggsave(chart_image, Chart_ScatterYearWind, width=4, height=3)
-#
-
 
 for (thebasin in basins){
   basin_meta_hurr <- subset(hurr_meta_sort, hurr_meta_sort$basin == thebasin )
@@ -291,7 +258,6 @@ for (thebasin in basins){
 }
 
 
-
 #############################
 ###Hurricane Charts by individual basins Since 1950 \n
 #############################
@@ -354,3 +320,85 @@ for (thebasin in basins){
   ggsave(chart_image, chartWindvsPressure, width=4, height=3)
 
 }
+
+
+#############################
+###Intense Hurrucicanes
+#############################
+
+major_meta_hurr <- subset(hurr_meta, hurr_meta$max_category >= 3)
+major_meta_hurr_sort <- arrange(major_meta_hurr,num_id)
+
+major_obs_hurr <- subset(major_obs_hurr, major_obs_hurr$max_category >= 3)
+major_obs_sort <- arrange(major_obs_hurr,num_id)
+
+
+#pressure vs wind
+chartWindvsPressure <- ggScatterAuto(major_obs_sort,
+  major_obs_sort$pressure,
+  major_obs_sort$wind_mph,
+  "lm",
+  "Major Hurricanes Pressure and Wind",
+  "Pressure",
+  "Wind MPH",
+  "NOAA - Hurrdat2 data"
+)
+
+chart_image <- paste("all", paste("scatter_pressure_wind", "png", sep="."), sep="_" )
+chart_image <- file.path(charts_dir, chart_image)
+chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
+ggsave(chart_image, chartWindvsPressure, width=4, height=3)
+
+
+#storm vs wind
+allyearwindmajor <- ggScatterAutoNoR(major_meta_hurr_sort,
+  major_meta_hurr_sort$num_id,
+  major_meta_hurr_sort$max_wind_mph,
+  "lm",
+  "Major Hurricanes and Max Wind",
+  "Storm",
+  "Max Wind MPH",
+  "NOAA - Hurrdat2 data"
+)
+
+chart_image <- paste("all", paste("major_scatter_strom_wind", "png", sep="."), sep="_" )
+chart_image <- file.path(charts_dir, chart_image)
+chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
+ggsave(chart_image, v, width=5, height=3)
+
+#storm vs wind
+allyearwindZoommajor  <- ggScatterAutoNoRLimMajor(major_meta_hurr_sort,
+  major_meta_hurr_sort$num_id,
+  major_meta_hurr_sort$max_wind_mph,
+  "lm",
+  "Major Hurricanes and Max Wind",
+  "Storm",
+  "Max Wind MPH",
+  "NOAA - Hurrdat2 data"
+)
+
+chart_image <- paste("all", paste("scatter_major_strom_wind_zoom", "png", sep="."), sep="_" )
+chart_image <- file.path(charts_dir, chart_image)
+chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
+ggsave(chart_image, allyearwindZoommajor , width=5, height=3)
+
+
+
+BarYearWindmajor <- ggBarMaxAll(
+  major_meta_hurr_sort,
+  paste("Major Hurricanes Max Wind by Storm", ""),
+  major_meta_hurr_sort$num_id,
+  major_meta_hurr_sort$max_wind_mph,
+  "Storm",
+  "Max wind (MPH)",
+  "NOAA - Hurrdat2 data"
+)
+
+chart_image <- paste("All", paste("bar_storm_major _maxwind", "png", sep="."), sep="_" )
+chart_image <- file.path(charts_dir, chart_image)
+chart_image <- chart_image[1]
+chart_image <- gsub(" ", "_", chart_image)
+ggsave(chart_image, BarYearWindmajor, width=4, height=3)

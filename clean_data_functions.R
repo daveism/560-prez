@@ -69,6 +69,7 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin, basinid){
   # storm name
   storm_id <- rep(hurr_meta$storm_id, times = hurr_meta$n_obs)
   storm_name <- rep(hurr_meta$storm_name, times = hurr_meta$n_obs)
+  storm_name <- rep(hurr_meta$storm_name, times = hurr_meta$n_obs)
 
   # prepare the hurrican obervation data from conversion to data frames
   hurr_obs <- lapply(hurr_obs, tibble::as_tibble)
@@ -198,11 +199,14 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin, basinid){
                        ifelse(hurr_obs$wind_knts >= 96 & hurr_obs$wind_knts <= 112, "3",
                        ifelse(hurr_obs$wind_knts >= 83 & hurr_obs$wind_knts <= 95, "2",
                        ifelse(hurr_obs$wind_knts >= 64 & hurr_obs$wind_knts <= 82, "1", NA)))))
+
+  hurr_obs$category <- as.numeric(hurr_obs$category)
+
   #add mph
   hurr_obs$wind_mph <- as.numeric((hurr_obs$wind_knts * 6076)/5280)
 
-  basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
-  basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
+  # basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
+  # basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
 
   # hurr_obs <- arrange(hurr_obs,desc(storm_id))
 
@@ -212,14 +216,53 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin, basinid){
 
 append_meta_data <- function(hurr_obs, hurr_meta){
 
-  storm_max_wind <- aggregate(x=hurr_obs$wind_mph, by=list(hurr_obs$storm_id),FUN=max)
-  storm_min_pressure <- aggregate(x=hurr_obs$pressure, by=list(hurr_obs$storm_id),FUN=min)
+  storm_max_wind <- aggregate(x=hurr_obs$wind_mph, by=list(hurr_obs$storm_id),FUN=max, na.rm=TRUE, na.action=NULL)
+  storm_min_pressure <- aggregate(x=hurr_obs$pressure, by=list(hurr_obs$storm_id),FUN=min, na.rm=TRUE, na.action=NULL)
+  storm_max_category <- aggregate(x=hurr_obs$category, by=list(hurr_obs$storm_id),FUN=max, na.rm=TRUE, na.action=NULL)
+
+  storm_max_wind[mapply(is.infinite, storm_max_wind)] <- NA
+  storm_min_pressure[mapply(is.infinite, storm_min_pressure)] <- NA
+  storm_max_category[mapply(is.infinite, storm_max_category)] <- NA
 
   storm_max_wind <- dplyr::rename(storm_max_wind,  storm_id = Group.1, max_wind_mph = x)
   storm_min_pressure <- dplyr::rename(storm_min_pressure,  storm_id = Group.1, min_pressure = x)
+  storm_max_category <- dplyr::rename(storm_max_category,  storm_id = Group.1, max_category = x)
+
+
+  storm_max_category$max_category <- as.numeric(storm_max_category$max_category)
 
   hurr_meta <- merge(x = hurr_meta, y=storm_max_wind, by=c("storm_id") , all.x = TRUE)
   hurr_meta <- merge(x = hurr_meta, y=storm_min_pressure, by=c("storm_id") , all.x = TRUE)
+  hurr_meta <- merge(x = hurr_meta, y=storm_max_category, by=c("storm_id") , all.x = TRUE)
+
+  hurr_obs <- merge(x = hurr_obs, y=storm_max_category, by=c("storm_id") , all.x = TRUE)
+
  return(hurr_meta)
+
+}
+
+
+append_obs_data <- function(hurr_obs, hurr_meta){
+
+  storm_max_wind <- aggregate(x=hurr_obs$wind_mph, by=list(hurr_obs$storm_id),FUN=max, na.rm=TRUE, na.action=NULL)
+  storm_min_pressure <- aggregate(x=hurr_obs$pressure, by=list(hurr_obs$storm_id),FUN=min, na.rm=TRUE, na.action=NULL)
+  storm_max_category <- aggregate(x=hurr_obs$category, by=list(hurr_obs$storm_id),FUN=max, na.rm=TRUE, na.action=NULL)
+
+  storm_max_wind[mapply(is.infinite, storm_max_wind)] <- NA
+  storm_min_pressure[mapply(is.infinite, storm_min_pressure)] <- NA
+  storm_max_category[mapply(is.infinite, storm_max_category)] <- NA
+
+  storm_max_wind <- dplyr::rename(storm_max_wind,  storm_id = Group.1, max_wind_mph = x)
+  storm_min_pressure <- dplyr::rename(storm_min_pressure,  storm_id = Group.1, min_pressure = x)
+  storm_max_category <- dplyr::rename(storm_max_category,  storm_id = Group.1, max_category = x)
+
+
+  storm_max_category$max_category <- as.numeric(storm_max_category$max_category)
+
+  hurr_obs <- merge(x = hurr_obs, y=storm_max_wind, by=c("storm_id") , all.x = TRUE)
+  hurr_obs <- merge(x = hurr_obs, y=storm_min_pressure, by=c("storm_id") , all.x = TRUE)
+  hurr_obs <- merge(x = hurr_obs, y=storm_max_category, by=c("storm_id") , all.x = TRUE)
+
+ return(hurr_obs)
 
 }
