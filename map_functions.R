@@ -39,8 +39,22 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
 
   worldmap = map_data ("world")
 
-  hur$map_status <- ifelse(is.nan(hur$category), hur$status, paste(hur$status, "category", hur$category ))
-  # hur <- dplyr::mutate(hur, map_status =  ))
+  hur$map_status <- ifelse(is.na(hur$category), as.character(hur$status), paste(hur$status, "category", hur$category ))
+
+  storm_color <- c(
+        # "" = "#367b7f",
+        "Other low" = "#60999e",
+        "Tropical depression" = "#4B8A8E",
+        "Tropical storm" = "#367b7f",
+        "Subtropical storm" = alpha("#367b7f", .8),
+        "Extratropical cyclone" = alpha("#367b7f", .8),
+        "Hurricane category 1" = "#f29d69",
+        "Extratropical cyclone category 1" = alpha("#f29d69", .8),
+        "Hurricane category 2" = "#e0713e",
+        "Hurricane category 3" = "#D86136",
+        "Hurricane category 4" = "#D0512E",
+        "Hurricane category 5" = "#c94227"
+      )
 
   ditch_the_axes <- theme(
   axis.text = element_blank(),
@@ -64,6 +78,7 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
                   color = map_status),
                   size = 1,
             linejoin = "mitre", lineend = "round") +
+     scale_color_manual(values = storm_color) +
      labs(color="Storm Level")  +
     # geom_path(data = hur,
     #           aes(x = -longitude, y = latitude,

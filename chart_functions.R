@@ -109,18 +109,6 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
            panel.background = element_blank())
 }
 
-makeBreaks <- function(field){
-  max_value <- max(unlist(field), na.rm = TRUE)
-  min_value <- min(unlist(field), na.rm = TRUE)
-
-  diff <- max_value - min_value
-
-  break_value <- diff/10
-
-
-
-}
-
 ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
   m <- lm(yfield ~ xfield, data);
