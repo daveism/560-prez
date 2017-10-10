@@ -22,9 +22,9 @@ In the Western Atlantic, it looks like max winds of intense hurricans are trendi
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
 
-In the Eastern Pacific, it looks slightly up?
+In the Western Atlantic, it looks up too!
 
-
+Is this Real? Well all the data is ready for you to dig in too, but first lets take a look at some of the cool stuff we can do with some scripting.
 
 [Previous page](5th.md) | [Next page](7th.md)
 
