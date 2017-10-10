@@ -30,6 +30,7 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Write csv data [write_csv.R](write_csv.R)
 - Create Plots [.R](.R)
 
+To Run Seperately more on this later.
 - Create track maps and graphs [.R](.R).  This is not run automtically you will have to run this seperately and it takes a while. 
 
 
