@@ -23,3 +23,11 @@ source(paste(repo_loc,"chart_functions.R", sep = "/"))
 
 #write csvs
 source(paste(repo_loc,"write_csv.R", sep = "/"))
+
+#charts
+source(paste(repo_loc,"charts_all.R", sep = "/"))
+source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
+source(paste(repo_loc,"charts_all_1950.R", sep = "/"))
+source(paste(repo_loc,"charts_basins_all_1950.R", sep = "/"))
+source(paste(repo_loc,"charts_intense_all.R", sep = "/"))
+source(paste(repo_loc,"charts_intense_all_basins.R", sep = "/"))
