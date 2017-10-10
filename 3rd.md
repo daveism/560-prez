@@ -3,7 +3,7 @@
 [Previous page](2nd.md) | [Next page](4th.md)
 ## Verify it all worked
 
-What's the top 10 hurricanse by max wind
+What's the top 10 hurricanes by max wind
 ```
 head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
 ```
@@ -22,7 +22,7 @@ head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind
 10       RICK     178.3674          906 2009
 ```
 
-How about top 10 hurricanse by minimum pressure
+How about top 10 hurricanes by minimum pressure
 ```
 head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
 ```
