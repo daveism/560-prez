@@ -24,7 +24,7 @@ Bar charts seem like the simplest way to look at data.  Maybe we can see a trend
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/All_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
-Looks like a slight upward trend in the later years.  
+I can't really tell if there is anything trending and to me it looks pretty random.
 
 Maybe there is a difference in the two basins (Western Atlantic and Eastern Pacific)?
 
@@ -32,15 +32,15 @@ Maybe there is a difference in the two basins (Western Atlantic and Eastern Paci
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
-Looks like a slight upward trend in the later years also maybe a little greater.
+In the Western Atlantic it looks pretty random.
 
 ***Max wind speed for storms for Eastern Pacific***
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
-Looks like a slight upward trend in the later years also, but in this case it doesn't  look as steep as the Western Atlantic.
+Looks like a slight upward trend in the later years, but it's really hard to tell.
 
-Nice but maybe a scatter plot can reveal a little more?
+Maybe a scatter plot can reveal a little more?
 
 [Previous page](3rd.md) | [Next page](5th.md)
 
