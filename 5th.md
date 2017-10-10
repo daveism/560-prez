@@ -22,9 +22,9 @@ In the Western Atlantic, it appears max winds are trending down?
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_storm_wind.png?raw=true" width="60%" height="60%" >
 
-In the Western Atlantic, it looks up too!
+In the Eastern Pacific, it appears max winds are trending slightly up?
 
-Is this Real? Well all the data is ready for you to dig in too, but first lets take a look at some of the cool stuff we can do with some scripting.
+Maybe all the storms that never became intense hurricanse are masking what we are looking for are intense storms getting more intense. Next up a max winds of intense hurricanse.
 
 [Previous page](4th.md) | [Next page](6th.md)
 
