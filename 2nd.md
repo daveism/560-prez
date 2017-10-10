@@ -13,12 +13,12 @@ If the Hurdat2 data has changed you will need to update the locations of the two
 
 ***Update repo***
 
-You also need to change THE REPO LOCATION to the location you downloaded or cloned the repository.  This should be the path the folder in [run_hurr.R](run_hurr.R#L1).  
+You will also need to update the location of the downloaded or cloaned repository here [run_hurr.R](run_hurr.R#L1).  
 
 Open R studio
 
 ```R
-source('THE REPO LOCATION\560-prez\run_hurr.R')
+source('THE REPO LOCATION YOU NEED TO UPDATE THIS\560-prez\run_hurr.R')
 ```
 The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Set some varriables
