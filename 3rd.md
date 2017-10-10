@@ -1,7 +1,7 @@
 [First page](1st.md)
 
 [Previous page](2nd.md) | [Next page](4th.md)
-## Let's Start looking at some data
+## Verify it all worked
 
 
 I want to make sure things imported correctly so let's take a look at variables we know are related.  Pressure and Wind should be related.  Lower pressures generally should have higher winds.
