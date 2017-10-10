@@ -21,13 +21,13 @@ Open R studio
 source('THE REPO LOCATION YOU NEED TO UPDATE THIS\560-prez\run_hurr.R')
 ```
 The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
-- Set some varriables
+- Set some variables
 - Install all the packages we need [install.R](install.R)
 - Load functions for cleaning the data [clean_data_functions.R](clean_data_functions.R)
 - Get, clean, and prepare the data [get_data.R](get_data.R)
 - Load functions to create maps [map_functions.R](map_functions.R)
 - Load functions to create charts [chart_functions.R](chart_functions.R)
-- Write csv data [write_csv.R](write_csv.R)
+- Write CSV data [write_csv.R](write_csv.R)
 - Create Plots [.R](.R)
 
 To Run Separately more on this later.
