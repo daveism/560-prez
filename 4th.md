@@ -37,6 +37,10 @@ I can't really tell if there is anything trending and to me, it looks pretty ran
 
 Maybe there is a difference in the two basins (Western Atlantic and Eastern Pacific)?
 
+To create this chart run [charts_basins_all.R](charts_basins_all.R) in R studio.
+```
+source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
+```
 ***Max wind speed for storms for Western Atlantic***
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
