@@ -8,9 +8,9 @@ Bar charts are great, but I want to see the scatter plot and see if there is any
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
 
-Looks max winds for intense hurricanse look like they are increasing. 
+Looks max winds might be down slightly? 
 
-How about any differences between the two basins.
+Maybe there are any differences between the two basins.
 
 ***Max wind speed for storms for Western Atlantic***
 
