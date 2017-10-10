@@ -12,7 +12,7 @@ I want to make sure things imported correctly so let's take a look at variables 
 
 Looks like a definite relationship.
 
-We downloaded both basins the Western Atlantic and theEastern Pacific.  Let's make sure we see the same relationships for both basins.
+We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships for both.
 
 ***Wind vs pressure for Western Atlantic***
 
