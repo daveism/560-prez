@@ -10,7 +10,7 @@ head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind
 
 How about top 10 hurricanse by minimum pressure
 ```
-head(arrange(hurr_meta, desc(min_pressure)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
+head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
 ```
 
 
