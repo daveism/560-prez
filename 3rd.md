@@ -42,7 +42,7 @@ head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, 
 ```
 
 
-I want to make sure things imported correctly so let's take a look at variables we know are related.  Pressure and Wind should be related.  Lower pressures generally should have higher winds.
+It looks like some of the same names are on the two lists and we already know pressure and wind should be related. So lets look...
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
