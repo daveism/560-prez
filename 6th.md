@@ -4,6 +4,11 @@
 ## Wind Speed for Intense Hurricanes
 Maybe the real increase is when hurricanes are intense.  maybe there is increase in the max wind speed for the intense hurricanes any storm that is category 3 or higher. 
 
+To create this chart run [charts_intense_all.R](charts_intense_all.R) in R studio.
+```
+source(paste(repo_loc,"charts_intense_all.R", sep = "/"))
+```
+
 ***Max wind speed for intense hurricanes for all basins***
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_major_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
