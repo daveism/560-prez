@@ -3,7 +3,7 @@
 [Previous page](start.md) | [Next page](3rd.md)
 ## Getting Started
 
-First you will have to clone or download this repository.
+First, you will have to clone or download this repository.
 
 
 ***Update Hurdat2***
@@ -13,7 +13,7 @@ If the Hurdat2 data has changed you will need to update the locations of the two
 
 ***Update repo***
 
-You will also need to update the location of the downloaded or cloaned repository here [run_hurr.R](run_hurr.R#L1).  
+You will also need to update the location of the downloaded or cloned repository here [run_hurr.R](run_hurr.R#L1).  
 
 Open R studio
 
@@ -30,9 +30,8 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Write csv data [write_csv.R](write_csv.R)
 - Create Plots [.R](.R)
 
-To Run Seperately more on this later.
-- Create track maps and graphs [.R](.R).  This is not run automtically you will have to run this seperately and it takes a while. 
-
+To Run Separately more on this later.
+- Create track maps and graphs [.R](.R).  This is not run automatically you will have to run this separately and it takes a while. 
 
 [Previous page](start.md) | [Next page](3rd.md)
 
