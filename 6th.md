@@ -17,6 +17,11 @@ Looks max winds for intense hurricanse look like they are increasing.
 
 How about any differences between the two basins.
 
+To create this chart run [charts_intense_all_basins.R](charts_intense_all_basins.R) in R studio.
+```
+source(paste(repo_loc,"charts_intense_all_basins.R", sep = "/"))
+```
+
 ***Max wind speed for intense hurricanes for Western Atlantic***
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind_zoom.png?raw=true" width="60%" height="60%" >
