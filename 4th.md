@@ -37,7 +37,7 @@ I can't really tell if there is anything trending and to me, it looks pretty ran
 
 Maybe there is a difference in the two basins (Western Atlantic and Eastern Pacific)?
 
-To create this chart run [charts_basins_all.R](charts_basins_all.R) in R studio.
+To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studio.
 ```
 source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
 ```
