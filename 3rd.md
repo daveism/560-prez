@@ -26,15 +26,15 @@ head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, 
 
    storm_name max_wind_mph min_pressure year
 1    PATRICIA     212.8902          872 2015
-2       ALLEN     189.8750          899 1980
-3     UNNAMED     184.1212          892 1935
-4     GILBERT     184.1212          888 1988
-5       WILMA     184.1212          882 2005
-6        PAKA     184.1212           NA 1997
-7       LINDA     184.1212          902 1997
-8       MITCH     178.3674          905 1998
-9        RITA     178.3674          895 2005
-10       RICK     178.3674          906 2009
+2       WILMA     184.1212          882 2005
+3     GILBERT     184.1212          888 1988
+4     UNNAMED     184.1212          892 1935
+5        RITA     178.3674          895 2005
+6       ALLEN     189.8750          899 1980
+7     CAMILLE     172.6136          900 1969
+8        IOKE     161.1061          900 2006
+9     KATRINA     172.6136          902 2005
+10      LINDA     184.1212          902 1997
 ```
 
 
