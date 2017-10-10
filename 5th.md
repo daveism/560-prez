@@ -16,7 +16,7 @@ Maybe there are any differences between the two basins.
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_storm_wind.png?raw=true" width="60%" height="60%" >
 
-In the Western Atlantic, it looks up too, maybe by good amount
+In the Western Atlantic, it appears max winds are trending down?
 
 ***Max wind speed for storms for Eastern Pacific***
 
