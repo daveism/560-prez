@@ -14,7 +14,7 @@ Then take a look at the storm details.
 View(hurr_obs)
 ```
 
-You can add calculate more summary data by modifying the functions in [clean_data_functions.R](clean_data_functions.R#L7)
+You can calculate more summary data by modifying the functions in [clean_data_functions.R](clean_data_functions.R#L7)
 
 For example I converted wind speed to MPH, because it's easier for me to relate to MPH.  
 
