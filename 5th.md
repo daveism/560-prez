@@ -1,24 +1,28 @@
 [First page](1st.md)
 
 [Previous page](4th.md) | [Next page](6th.md)
-## Lets look at max wind speed in mph!
-Bar charts are great but I also want to see the scatter plot and see if there is anything else it reveals.
+## More on max wind speed in mph!
+Bar charts are great, but I want to see the scatter plot and see if there is anything happening we can't see in the bar charts.  
 
 ***Max wind speed for storms for all basins***
 
-<img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind.png?raw=true" width="75%" height="75%" >
+<img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
 
-Looks like the slight upward trend is here also.
+Looks max winds might be down slightly? 
 
-A look at the two basins (Western Atlantic and Eastern Pacific) since it appears that there a some differences.
+Maybe there is differences between the two basins.
 
 ***Max wind speed for storms for Western Atlantic***
 
-<img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_storm_wind.png?raw=true" width="75%" height="75%" >
+<img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_storm_wind.png?raw=true" width="60%" height="60%" >
+
+In the Western Atantic it looks down? I am suprised.
 
 ***Max wind speed for storms for Eastern Pacific***
 
-<img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_storm_wind.png?raw=true" width="75%" height="75%" >
+<img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_storm_wind.png?raw=true" width="60%" height="60%" >
+
+In the Eastern Pacific it looks slightly up? I am suprised.
 
 [Previous page](4th.md) | [Next page](6th.md)
 
