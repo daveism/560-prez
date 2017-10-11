@@ -42,7 +42,23 @@ To create this chart run [charts_intense_all_basins.R](charts_intense_all_basins
 source(paste(repo_loc,"charts_intense_all_basins.R", sep = "/"))
 ```
 
-***Max wind speed for intense hurricanes for Western Atlantic***
+The top 10 Major Hurricanes for the Western Atlantic
+
+```
+head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max_wind_mph)), 10)  %>% select(storm_name,  max_wind_mph, min_pressure, year) 
+
+   storm_name max_wind_mph min_pressure year
+1       ALLEN     189.8750          899 1980
+2     UNNAMED     184.1212          892 1935
+3     GILBERT     184.1212          888 1988
+4       WILMA     184.1212          882 2005
+5       MITCH     178.3674          905 1998
+6        RITA     178.3674          895 2005
+7       CARLA     172.6136          931 1961
+8      ANDREW     172.6136          922 1992
+9        DEAN     172.6136          905 2007
+10      ANITA     172.6136          926 1977
+```
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind_zoom.png?raw=true" width="60%" height="60%" >
 
