@@ -15,7 +15,7 @@ chartWindvsPressure <- ggScatterAuto(hurr_obs_sort,
   "NOAA - Hurrdat2 data"
 )
 
-chart_image <- paste("all", paste("all_scatter_pressure_and_wind", "png", sep="."), sep="_" )
+chart_image <- paste("all", paste("scatter_pressure_and_wind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
