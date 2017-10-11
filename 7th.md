@@ -2,7 +2,7 @@
 
 [Previous page](6th.md) | [Next page](last.md)
 ## Now for something kind of interesting
-For all of you that geek out on hurricanes here is a series if storm tracks for the Western Atlantic.
+For all of you that geek out on hurricanes. Let's generate a series of maps and charts of storm tracks for the Western Atlantic since 2000.
 
 You can run this your self using [maps_tracks.R](maps_tracks.R) ***warning*** this will take a good amount of time, so grab a drink and sit back.
 
