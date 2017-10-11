@@ -20,7 +20,7 @@ for example getting the storm EP202015 aka PATRICIA run this
 ```
 get_storm_data("EP202015")
 ```
-- [track map](chartmaps/storm/storm_PATRICIA_EP202015_wind_chart.png)
+- [track map](maps/storm/storm_PATRICIA_EP202015_wind_chart.png)
 - [wind chart](charts/storm/storm_PATRICIA_EP202015_track_map.png)
 - [summary data csv](data/storm_EP202015_summary_data.csv)
 - [detail data csv](data/storm_EP202015_detail_data.csv)
