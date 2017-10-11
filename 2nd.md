@@ -26,6 +26,7 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Get, clean, and prepare the data [get_data.R](get_data.R)
 - Load functions to create maps [map_functions.R](map_functions.R)
 - Load functions to create charts [chart_functions.R](chart_functions.R)
+- Load functions to create individual storm map, chart and data [make_storm_datasets.R](make_storm_datasets.R)
 - Write CSV data [write_csv.R](write_csv.R)
 - Create charts
   - [charts_all.R]()
@@ -36,8 +37,7 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
   - [charts_intense_all_basins.R]()
 
 
-To Run Separately more on this later.
-These are not run automatically!  You will want to run this separately and it takes a good amount of time, so if you have the time...
+The following maps and charts are not run automatically!  You will want to run this separately and it takes a good amount of time, so if you have the time...
 - Create track maps  [run_hurr_track_charts.R](run_hurr_track_charts.R).  
 - Create Strom Wind graphs [run_hurr_track_charts.R](run_hurr_track_charts.R).
 
