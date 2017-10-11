@@ -2,7 +2,7 @@
 
 [Previous page](4th.md) | [Next page](6th.md)
 ## More on max wind speed in mph!
-Bar charts are great, but I want to see the scatter plot and see if there is anything happening we can't see in the bar charts.  
+Bar charts are great, but maybe a scatter plot will reveal something we can't see in the bar charts.  
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
