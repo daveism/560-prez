@@ -31,7 +31,7 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/All_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
-I can't really tell if there is anything trending and to me, it looks pretty random.
+I can't really tell if there is a trend in any direction, it looks pretty random.
 
 Maybe there is a difference in the two basins (Western Atlantic and Eastern Pacific)?
 
@@ -39,13 +39,10 @@ To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studi
 ```
 source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
 ```
-***Max wind speed for storms for Western Atlantic***
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
 In the Western Atlantic, it looks pretty random.
-
-***Max wind speed for storms for Eastern Pacific***
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
