@@ -23,7 +23,7 @@ for (huricane in basin_obs_hurr$storm_id){
   )
 
 
-    chart_image <- paste( hur$basin, paste(hur$storm_name, paste("wind", "png", sep="."), sep="_" ), sep="_" )
+    chart_image <- paste( hur$basin, paste(hur$storm_name, hur$storm_id, paste("wind", "png", sep="."), sep="_" ), sep="_" )
     chart_image <- file.path(charts_storm_dir, chart_image)
     chart_image <- chart_image[1]
     chart_image <- gsub(" ", "_", chart_image)
