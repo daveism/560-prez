@@ -8,6 +8,10 @@ Use this guide to dive into the hurdat2 data or just grab the data:
 - Hurricane details: [hurricanes_detail.csv](data/hurricanes_detail.csv)
 - Hurricane summarries: [hurricanes_summary.csv](data/hurricanes_summary.csv)
 
+## Charts
+A collection of charts I used in this and some others I did not.
+- [Other charts](charts/)
+
 
 ## References
 A good amount of the logic to clean the hurdata2: https://geanders.github.io/RProgrammingForResearch/entering-and-cleaning-data-3.html published under Creative Commons Zero v1.0 Universal <http://creativecommons.org/publicdomain/zero/1.0/>
