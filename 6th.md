@@ -66,7 +66,7 @@ It appears that max winds for intense hurricanse are trending up!
 
 Let's see if there are any differences in the two basins.
 
-To create this chart run [charts_intense_all_basins.R](charts_intense_all_basins.R) in R studio.
+To create these chart run [charts_intense_all_basins.R](charts_intense_all_basins.R) in R studio.
 ```
 source(paste(repo_loc,"charts_intense_all_basins.R", sep = "/"))
 ```
