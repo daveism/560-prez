@@ -42,7 +42,7 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
   xmax <- -storm_min_long
   ymin <- storm_min_lat
   ymax <- storm_max_lat
-  buff <- 10
+  buff <- 15
 
   worldmap = map_data ("world")
 
