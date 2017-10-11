@@ -31,6 +31,11 @@ head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  ma
 9        RITA          178          895 2005
 10       RICK          178          906 2009
 ```
+
+
+<img alt="bar charts of max winds for intense storms for all basins" src="../master/charts/All_bar_major_storm_max_wind.png?raw=true" width="60%" height="60%" >
+
+
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_major_strom_wind.png?raw=true" width="60%" height="60%" >
 
 ```
