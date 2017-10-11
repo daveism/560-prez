@@ -36,8 +36,8 @@ source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 <img alt="Hurricane Matthew Wind Chart" src="../master/charts/storm/Western_Atlantic_MATTHEW_AL142016_wind.png?raw=true" width="75%" height="75%" >
 
 ### Want to see more?
-- [maps](maps/storm/)
-- [charts](charts/storm/)
+- [All Track Maps](maps/storm/)
+- [All Wind charts](charts/storm/)
 
 [Previous page](6th.md) | [Next page](last.md)
 
