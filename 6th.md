@@ -34,28 +34,27 @@ head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  ma
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_major_strom_wind.png?raw=true" width="60%" height="60%" >
 
 ```
-cor <- lm(formula = major_obs_hurr$wind_mph ~ major_obs_hurr$pressure)
+cor <- lm(formula = major_obs_hurr$wind_mph ~ major_obs_hurr$num_id)
 
 summary(cor)
 
 Call:
-lm(formula = major_obs_hurr$wind_mph ~ major_obs_hurr$pressure)
+lm(formula = major_obs_hurr$wind_mph ~ major_obs_hurr$num_id)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--58.057  -6.536   1.770   7.148  63.398 
+-64.475 -30.551  -2.004  27.284 139.383 
 
 Coefficients:
-                          Estimate Std. Error t value            Pr(>|t|)    
-(Intercept)             1538.46278    4.47519   343.8 <0.0000000000000002 ***
-major_obs_hurr$pressure   -1.48847    0.00456  -326.4 <0.0000000000000002 ***
+                          Estimate   Std. Error t value            Pr(>|t|)    
+(Intercept)           279.94357510  10.97974353   25.50 <0.0000000000000002 ***
+major_obs_hurr$num_id  -0.00102440   0.00005579  -18.36 <0.0000000000000002 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 11.68 on 11653 degrees of freedom
-  (11249 observations deleted due to missingness)
-Multiple R-squared:  0.9014,	Adjusted R-squared:  0.9014 
-F-statistic: 1.066e+05 on 1 and 11653 DF,  p-value: < 0.00000000000000022
+Residual standard error: 34.86 on 22902 degrees of freedom
+Multiple R-squared:  0.01451,	Adjusted R-squared:  0.01447 
+F-statistic: 337.2 on 1 and 22902 DF,  p-value: < 0.00000000000000022
 
 ```
 It appears that max winds for intense hurricanse are trending up!
