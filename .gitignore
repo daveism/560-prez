@@ -2,7 +2,7 @@
 .Rhistory
 .Rapp.history
 
-data/
+# data/
 
 # Session Data files
 .RData
