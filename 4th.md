@@ -4,7 +4,7 @@
 ## Max wind speed overtime
 I appended the data with several calculated columns.  For example max wind speed, minimum pressure, and max saffir simpson category for each storm.
 
-Enter this and take a look at the storm summary data.
+Take a look at the storm summary data.
 ```
 View(hurr_meta)
 ```
