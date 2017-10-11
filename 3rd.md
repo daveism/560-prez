@@ -3,7 +3,7 @@
 [Previous page](2nd.md) | [Next page](4th.md)
 ## Verify it all worked
 
-What's the top 10 hurricanes by max wind
+List the top 10 hurricanes by max wind
 ```
 head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
 ```
