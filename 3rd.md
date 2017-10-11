@@ -3,7 +3,7 @@
 [Previous page](2nd.md) | [Next page](4th.md)
 ## Verify it all worked
 
-What's the top 10 hurricanes by max wind
+List the top 10 hurricanes by max wind
 ```
 head(arrange(hurr_meta, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
 ```
@@ -44,11 +44,39 @@ head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, 
 
 It looks like some of the same names are on the two lists and we already know pressure and wind should be related. So lets look...
 
+```
+cor <- lm(formula = hurr_obs_sort$wind_mph ~ hurr_obs_sort$pressure)
+```
+
+```
+summary(fit)
+
+Call:
+lm(formula = hurr_obs_sort$wind_mph ~ hurr_obs_sort$pressure)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-66.141  -5.452   0.302   6.056  64.863 
+
+Coefficients:
+                          Estimate  Std. Error t value            Pr(>|t|)    
+(Intercept)            1601.520679    2.953963   542.2 <0.0000000000000002 ***
+hurr_obs_sort$pressure   -1.553320    0.002973  -522.5 <0.0000000000000002 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 10.1 on 33084 degrees of freedom
+  (43473 observations deleted due to missingness)
+Multiple R-squared:  0.8919,	Adjusted R-squared:  0.8919 
+F-statistic: 2.73e+05 on 1 and 33084 DF,  p-value: < 0.00000000000000022
+```
+
+Looks a strong relationship exists, let's look at the the scatter plots.
+
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
 source(paste(repo_loc,"charts_all.R", sep = "/"))
 ```
-***Wind vs pressure for all basins***
 
 <img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
 
