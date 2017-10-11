@@ -102,22 +102,22 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
             position = "dodge", stat = "summary",
             fun.y = "max", fill="#b2ddf2", color="#b2ddf2",
             width=.75) +
-  coord_cartesian(ylim = c(5, 225)) +
-  scale_y_continuous(breaks = seq(0, 225, by = 25)) +
+  coord_cartesian(ylim = c(0, 210)) +
+  scale_y_continuous(expand = c(0,0), breaks = seq(0, 200, by = 25)) +
   theme_minimal(base_size=theme_base_size) +
    labs(title= paste(title),
         subtitle=storm_datet,
         x=xlabel,
         y=ylabel,
         caption=paste("Source:",source)) +
-        theme(plot.subtitle = element_text(color="#666666"),
-                 plot.caption = element_text(color="#AAAAAA", size=6),
+        theme(plot.subtitle = element_text(color="#666666", size=5),
+                 plot.caption = element_text(color="#AAAAAA", size=5),
                  axis.text.x=element_text(angle=90, size=3),
                  axis.ticks.x=element_blank(),
-                 panel.grid.major = element_line(colour = "grey10", size=.05),
+                 panel.grid.major = element_line(colour = "#F0F0F0", size=.1),
                panel.grid.minor = element_blank(),
            panel.background = element_blank(),
-         panel.border = element_rect(colour = "grey20", fill=NA, size=.25))
+         panel.border = element_rect(colour = "#F0F0F0", fill=NA, size=.25))
 }
 
 ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){

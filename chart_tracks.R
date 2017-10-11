@@ -2,8 +2,8 @@
 ###Hurricane winds by storm
 #############################
 
-basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == "Western Atlantic" )
-basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == "Western Atlantic" )
+basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == "Western Atlantic" & hurr_meta$year >= 1950)
+basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == "Western Atlantic" & hurr_obs$year >= 1950)
 
 basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
 basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
@@ -14,7 +14,7 @@ for (huricane in basin_obs_hurr$storm_id){
 
   bar_time_winds <- ggBarTime(
     hur,
-    paste( paste("Winds speed for", hur$storm_name)),
+    paste( paste("Winds speeds for", hur$storm_name)),
     hur$date_time,
     format(hur$wind_mph, digits = 0),
     "Date Time",
