@@ -79,7 +79,7 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 ```
 ***Wind vs pressure for all basins***
 
-<img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
+
 
 Looks like a definite relationship.
 
