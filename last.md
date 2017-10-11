@@ -12,7 +12,7 @@ Use this guide to dive into the hurdat2 data or just grab the data:
 ## References
 A good amount of the logic to clean the hurdata2: https://geanders.github.io/RProgrammingForResearch/entering-and-cleaning-data-3.html published under Creative Commons Zero v1.0 Universal <http://creativecommons.org/publicdomain/zero/1.0/>
 
-ropensci  http://ropensci.github.io/reproducibility-guide/sections/introduction/
+ropensci http://ropensci.github.io/reproducibility-guide/sections/introduction/
 
 NOAA http://www.nhc.noaa.gov/climo/
 
