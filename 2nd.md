@@ -27,7 +27,14 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Load functions to create maps [map_functions.R](map_functions.R)
 - Load functions to create charts [chart_functions.R](chart_functions.R)
 - Write CSV data [write_csv.R](write_csv.R)
-- Create Plots [.R](.R)
+- Create charts
+  - [charts_all.R]()
+  - [charts_basins_all.R]()
+  - [charts_all_1950.R]()
+  - [charts_basins_all_1950.R]()
+  - [charts_intense_all.R]()
+  - [charts_intense_all_basins.R]()
+
 
 To Run Separately more on this later.
 These are not run automatically!  You will want to run this separately and it takes a good amount of time, so if you have the time...
