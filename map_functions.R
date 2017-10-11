@@ -55,8 +55,8 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
         "Tropical storm" = "#367b7f",
         "Subtropical storm" = alpha("#367b7f", .8),
         "Extratropical cyclone" = alpha("#367b7f", .8),
-        "Hurricane category 1" = "#f29d69",
         "Extratropical cyclone category 1" = alpha("#f29d69", .8),
+        "Hurricane category 1" = "#f29d69",
         "Hurricane category 2" = "#e0713e",
         "Hurricane category 3" = "#D86136",
         "Hurricane category 4" = "#D0512E",
@@ -70,8 +70,8 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
         "Tropical storm",
         "Subtropical storm",
         "Extratropical cyclone",
-        "Hurricane category 1",
         "Extratropical cyclone category 1",
+        "Hurricane category 1",
         "Hurricane category 2",
         "Hurricane category 3",
         "Hurricane category 4",
@@ -89,9 +89,6 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
 
   wrld <- c(geom_polygon(aes(long,lat,group=group), size = 0.1, colour= "gray50", fill="cornsilk", alpha=0.8, data=worldmap))
   track_map <- ggplot() +
-    # coord_cartesian(xlim = c(xmin+buff, xmax),  ylim = c(ymin-buff, ymax)) +
-    # coord_fixed(2.3) +
-    # coord_cartesian(xlim = c(-160, 10),  ylim = c(50, 10)) +
     coord_cartesian(xlim = c((xmin-buff),(xmax+buff)), ylim = c((ymin-buff),(ymax+buff))) +
     wrld  +
     theme(panel.background = element_rect(fill='lightblue')) +
