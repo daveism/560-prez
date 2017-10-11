@@ -78,7 +78,7 @@ To create this chart run [charts_all.R](charts_all.R) in R studio.
 source(paste(repo_loc,"charts_all.R", sep = "/"))
 ```
 
-<img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
+<img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_and_wind.png?raw=true" width="60%" height="60%" >
 
 Looks like a definite relationship.
 
