@@ -61,7 +61,6 @@ chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, allyearwindZoommajor , width=image_xwidth, height=image_height)
 
 
-
 BarYearWindmajor <- ggBarMaxAll(
   major_meta_hurr_sort,
   paste("Major Hurricanes Max Wind by Storm", ""),
@@ -77,3 +76,14 @@ chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
 ggsave(chart_image, BarYearWindmajor, width=image_width, height=image_height)
+
+
+rm(major_meta_hurr)
+rm(major_meta_hurr_sort)
+rm(major_obs_hurr)
+rm(major_obs_sort)
+
+rm(chartWindvsPressure)
+rm(allyearwindmajor)
+rm(allyearwindZoommajor)
+rm(BarYearWindmajor)

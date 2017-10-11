@@ -86,3 +86,16 @@ for (thebasin in basins){
   ggsave(chart_image, chartWindvsPressuremajor, width=image_width, height=image_height)
 
 }
+
+
+rm(major_meta_hurr)
+rm(major_meta_hurr_sort)
+rm(major_obs_hurr)
+rm(major_obs_sort)
+rm(basins)
+rm(basin_meta_hurr)
+rm(basin_obs_hurr)
+rm(Chart_ScatterYearWindmajor)
+rm(Chart_ScatterYearWindmajor_zoom)
+rm(Chart_BarYearWindmajor)
+rm(chartWindvsPressuremajor)

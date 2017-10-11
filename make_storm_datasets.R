@@ -41,8 +41,5 @@ get_storm_data <- function(the_storm_id){
   chart_image <- gsub(" ", "_", map_image)
   ggsave(map_image, map_track, width=image_width, height=image_height)
 
-  bar_time_winds
-  map_track
-  View(storm_obs)
-  View(storm_meta)
+
 }

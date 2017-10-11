@@ -1,6 +1,9 @@
 #############################
 ###Hurricane Charts by individual basins Since 1950 \n
 #############################
+hurr_meta_sort <- arrange(hurr_meta,num_id)
+hurr_obs_sort <- arrange(hurr_obs,num_id)
+
 basins <- unique(hurr_meta_sort$basin)
 
 for (thebasin in basins){
@@ -61,3 +64,10 @@ for (thebasin in basins){
   ggsave(chart_image, chartWindvsPressure, width=image_width, height=image_height)
 
 }
+
+rm(hurr_meta_sort)
+rm(hurr_obs_sort)
+rm(basins)
+rm(Chart_ScatterYearWind)
+rm(Chart_BarYearWind)
+rm(chartWindvsPressure)

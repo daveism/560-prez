@@ -2,8 +2,8 @@
 ###Hurricane tracks by storm
 #############################
 
-basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == "Western Atlantic" & hurr_meta$year >= 2000)
-basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == "Western Atlantic" & hurr_obs$year >= 2000)
+basin_meta_hurr <- subset(hurr_meta, hurr_meta$basin == "Western Atlantic" & hurr_meta$year >= 2016)
+basin_obs_hurr <- subset(hurr_obs, hurr_obs$basin == "Western Atlantic" & hurr_obs$year >= 2016)
 
 basin_meta_hurr <- arrange(basin_meta_hurr,desc(num_id))
 basin_obs_hurr <- arrange(basin_obs_hurr,desc(num_id))
@@ -25,5 +25,11 @@ for (huricane in basin_meta_hurr$storm_id){
   map_image <- map_image[1]
   chart_image <- gsub(" ", "_", map_image)
   ggsave(map_image, map_track, width=image_width, height=image_height)
+  rm(map_image)
 
 }
+
+rm(basin_meta_hurr)
+rm(basin_obs_hurr)
+rm(basin_meta_hurr)
+rm(basin_obs_hurr)
