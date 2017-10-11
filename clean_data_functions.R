@@ -203,12 +203,7 @@ create_obs_data <- function(hurr_tracks, hurr_meta, basin, basinid){
   hurr_obs$category <- as.numeric(hurr_obs$category)
 
   #add mph
-  hurr_obs$wind_mph <- as.numeric((hurr_obs$wind_knts * 6076)/5280)
-
-  # basin_meta_hurr <- arrange(basin_meta_hurr,desc(storm_id))
-  # basin_obs_hurr <- arrange(basin_obs_hurr,desc(storm_id))
-
-  # hurr_obs <- arrange(hurr_obs,desc(storm_id))
+  hurr_obs$wind_mph <- as.numeric(format(as.numeric((hurr_obs$wind_knts * 6076)/5280), digits = 0))
 
   return(hurr_obs)
 }
