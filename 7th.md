@@ -14,7 +14,7 @@ You can run this your self using []() ***warning*** this will take a good amount
 ```
 
 examples:
-<img alt="Hurricane Matthew Track Map" src="../master/charts/MATTHEW_AL142016_track_map.png?raw=true" width="60%" height="60%" >
+<img alt="Hurricane Matthew Track Map" src="../master/maps/storm/MATTHEW_AL142016_track_map.png?raw=true" width="60%" height="60%" >
 
 <img alt="Hurricane Matthew Wind Chart" src="../master/charts/MATTHEW_AL142016_track_map.png?raw=true" width="60%" height="60%" >
 
