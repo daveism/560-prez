@@ -13,7 +13,7 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 
 Max winds might be down slightly? I was not expecting this.
 
-Maybe there are any differences between the two basins.
+Maybe there are some differences in the individual basins.
 
 To create this chart run [charts_basins_all.R](charts_basins_all.R) in R studio.
 ```
