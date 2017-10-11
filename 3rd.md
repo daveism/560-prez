@@ -89,13 +89,9 @@ To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studi
 source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
 ```
 
-***Wind vs pressure for Western Atlantic***
-
 <img alt="wind vs pressure for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
 
 Looks like a definite relationship too.
-
-***Wind vs pressure for Eastern Pacific***
 
 <img alt="wind vs pressure for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
 
