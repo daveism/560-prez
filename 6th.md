@@ -14,7 +14,22 @@ Then take a look at the intense hurricane data
 View(major_meta_hurr)
 View(major_obs_hurr)
 ```
+The top 10 Major Hurricanes
 
+```
+ head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
+    storm_name max_wind_mph min_pressure year
+1    PATRICIA     212.8902          872 2015
+2       ALLEN     189.8750          899 1980
+3     UNNAMED     184.1212          892 1935
+4     GILBERT     184.1212          888 1988
+5       WILMA     184.1212          882 2005
+6        PAKA     184.1212           NA 1997
+7       LINDA     184.1212          902 1997
+8       MITCH     178.3674          905 1998
+9        RITA     178.3674          895 2005
+10       RICK     178.3674          906 2009
+```
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_major_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
 
 Looks max winds for intense hurricanse look like they are increasing. 
