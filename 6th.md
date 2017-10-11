@@ -17,7 +17,8 @@ View(major_obs_hurr)
 The top 10 Major Hurricanes
 
 ```
- head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
+head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
+
     storm_name max_wind_mph min_pressure year
 1    PATRICIA     212.8902          872 2015
 2       ALLEN     189.8750          899 1980
