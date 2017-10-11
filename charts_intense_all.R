@@ -19,7 +19,7 @@ chartWindvsPressure <- ggScatterAuto(major_obs_sort,
   "NOAA - Hurrdat2 data"
 )
 
-chart_image <- paste("all", paste("scatter_pressure_wind", "png", sep="."), sep="_" )
+chart_image <- paste("all", paste("scatter_major_pressure_wind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
@@ -37,7 +37,7 @@ allyearwindmajor <- ggScatterAutoNoR(major_meta_hurr_sort,
   "NOAA - Hurrdat2 data"
 )
 
-chart_image <- paste("all", paste("major_scatter_strom_wind", "png", sep="."), sep="_" )
+chart_image <- paste("all", paste("scatter_major_strom_wind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
@@ -72,7 +72,7 @@ BarYearWindmajor <- ggBarMaxAll(
   "NOAA - Hurrdat2 data"
 )
 
-chart_image <- paste("All", paste("bar_storm_major _maxwind", "png", sep="."), sep="_" )
+chart_image <- paste("All", paste("bar_major_storm_max_wind", "png", sep="."), sep="_" )
 chart_image <- file.path(charts_dir, chart_image)
 chart_image <- chart_image[1]
 chart_image <- gsub(" ", "_", chart_image)
