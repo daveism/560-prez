@@ -4,7 +4,7 @@
 
 # Your Turn!
 
-Using this guide dive into the data or just grab the data @
+Use this guide to dive into the hurdat2 data or just grab the data @
 - Hurricane details: [hurricanes_detail.csv](data/hurricanes_detail.csv)
 - Hurricane summarries: [hurricanes_summary.csv](data/hurricanes_summary.csv)
 
