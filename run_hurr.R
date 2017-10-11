@@ -26,6 +26,7 @@ source(paste(repo_loc,"map_functions.R", sep = "/"))
 
 #add chart functions
 source(paste(repo_loc,"chart_functions.R", sep = "/"))
+source(paste(repo_loc,"make_storm_datasets.R", sep = "/"))
 
 #write csvs
 source(paste(repo_loc,"write_csv.R", sep = "/"))
