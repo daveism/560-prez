@@ -9,8 +9,6 @@ To create this chart run [charts_all.R](charts_all.R) in R studio.
 source(paste(repo_loc,"charts_all.R", sep = "/"))
 ```
 
-***Max wind speed for storms for all basins***
-
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_strom_wind.png?raw=true" width="60%" height="60%" >
 
 Looks max winds might be down slightly? 
