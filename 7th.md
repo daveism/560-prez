@@ -25,9 +25,7 @@ source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 
 ---
 
-<img alt="Hurricane FRANCES Track Map" src="../master/maps/storm/FRANCES_AL062004_track_map.png.png?raw=true" width="80%" height="80%" >
-
----
+<img alt="Hurricane FRANCES Track Map" src="../master/maps/storm/FRANCES_AL062004_track_map.png?raw=true" width="80%" height="80%" >
 
 <img alt="Hurricane FRANCES Wind Chart" src="../master/charts/storm/Western_Atlantic_FRANCES_AL062004_wind.png?raw=true" width="75%" height="75%" >
 
