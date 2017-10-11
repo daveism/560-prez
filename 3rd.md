@@ -80,9 +80,9 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 
 <img alt="Wind vs pressure for all basins" src="../master/charts/all_scatter_pressure_and_wind.png?raw=true" width="60%" height="60%" >
 
-Looks like a definite relationship.
+Looks like a very strong relationship.
 
-We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships for both.
+We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships in both basins.
 
 To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studio.
 ```
@@ -91,11 +91,8 @@ source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
 
 <img alt="wind vs pressure for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
 
-Looks like a definite relationship too.
-
 <img alt="wind vs pressure for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_pressure_wind.png?raw=true" width="60%" height="60%" >
 
-Looks like a definite relationship.
 
 [Previous page](2nd.md) | [Next page](4th.md)
 
