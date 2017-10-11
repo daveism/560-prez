@@ -1,7 +1,7 @@
 [First page](1st.md)
 
 [Previous page](6th.md) | [Next page](last.md)
-## Now for something kind of interesting
+## Hurricane Tracks
 For all of you that geek out on hurricanes. Let's generate a series of maps and charts of storm tracks for the Western Atlantic since 2000.
 
 You can run this your self using [maps_tracks.R](maps_tracks.R)
@@ -36,8 +36,8 @@ source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 <img alt="Hurricane Matthew Wind Chart" src="../master/charts/storm/Western_Atlantic_MATTHEW_AL142016_wind.png?raw=true" width="75%" height="75%" >
 
 ### Want to see more?
-- [maps](maps/storm/)
-- [charts](charts/storm/)
+- [All track maps](maps/storm/)
+- [All wind charts](charts/storm/)
 
 [Previous page](6th.md) | [Next page](last.md)
 
