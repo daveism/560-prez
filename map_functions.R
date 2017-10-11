@@ -37,6 +37,13 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
   storm_min_long <- aggregate(x=hur$longitude, by=list(hur$storm_id),FUN=min)
   storm_min_long <- as.numeric(storm_min_long$x)
 
+
+  xmin <- -storm_max_long
+  xmax <- -storm_min_long
+  ymin <- storm_min_lat
+  ymax <- storm_max_lat
+  buff <- 10
+
   worldmap = map_data ("world")
 
   hur$map_status <- ifelse(is.na(hur$category), as.character(hur$status), paste(hur$status, "category", hur$category ))
@@ -82,8 +89,10 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
 
   wrld <- c(geom_polygon(aes(long,lat,group=group), size = 0.1, colour= "gray50", fill="cornsilk", alpha=0.8, data=worldmap))
   track_map <- ggplot() +
-    coord_fixed(1.3) +
-    coord_fixed(xlim = c(-160, -10.0),  ylim = c(60, 00)) +
+    # coord_cartesian(xlim = c(xmin+buff, xmax),  ylim = c(ymin-buff, ymax)) +
+    # coord_fixed(2.3) +
+    # coord_cartesian(xlim = c(-160, 10),  ylim = c(50, 10)) +
+    coord_cartesian(xlim = c((xmin-buff),(xmax+buff)), ylim = c((ymin-buff),(ymax+buff))) +
     wrld  +
     theme(panel.background = element_rect(fill='lightblue')) +
     geom_path(data = hur,
@@ -104,9 +113,13 @@ make_hurricane_track_maps <- function(hurr, tittle, source){
       caption=paste("Source:",source))+
       theme(legend.title=element_text(size=4),
             legend.text=element_text(size=3),
-            legend.position="bottom",
+            legend.key.width=unit(.25,"line"),
+            legend.position="right",
+            legend.box="horizontal",
+            legend.direction="vertical",
             plot.subtitle = element_text(size=5,color="#666666"),
-           plot.caption = element_text(color="#AAAAAA", size=5))
+            plot.caption = element_text(color="#AAAAAA", size=5),
+            panel.border = element_rect(colour = "grey60", fill=NA, size=1))
 
   return(track_map)
 
