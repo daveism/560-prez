@@ -46,9 +46,9 @@ In the Western Atlantic, it looks pretty random.
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
-Looks like a slight upward trend in the later years, but it's really hard to tell.
+In the Eastern Pacific, there might be a slight upward trend in the later years, but it's really hard to tell.
 
-Maybe a scatter plot can reveal a little more?
+Maybe scatter plots can reveal a little more.
 
 [Previous page](3rd.md) | [Next page](5th.md)
 
