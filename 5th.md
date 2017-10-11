@@ -1,7 +1,7 @@
 [First page](1st.md)
 
 [Previous page](4th.md) | [Next page](6th.md)
-## Max wind speed - Scatter Plots
+## Max wind speed overtime - Scatter Plots
 Bar charts are great, but maybe a scatter plot will reveal something we can't see in the bar charts.  
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
