@@ -2,7 +2,7 @@
 
 [Previous page](3rd.md) | [Next page](5th.md)
 ## Max wind speed overtime
-I append the data with several calculated columns.  For example max wind speed, minimum pressure, and max saffir simpson category for each storm.
+I appended the data with several calculated columns.  For example max wind speed, minimum pressure, and max saffir simpson category for each storm.
 
 Enter this and take a look at the storm summary data.
 ```
