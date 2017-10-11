@@ -33,7 +33,7 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 
 I can't really tell if there is a trend in any direction, it looks pretty random.
 
-Maybe there is a difference in the two basins (Western Atlantic and Eastern Pacific)?
+Maybe there is a difference in the individual basins (Western Atlantic and Eastern Pacific)?
 
 To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studio.
 ```
