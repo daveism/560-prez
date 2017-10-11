@@ -2,7 +2,7 @@
 
 [Previous page](3rd.md) | [Next page](5th.md)
 ## Max wind speed overtime
-I have added a bunch of extra data to the datasets.  Data such as max wind speed and minimum pressure for each storm
+I append the data with several calculated columns.  For example max wind speed, minimum pressure, and max saffir simpson category for each storm.
 
 Enter this and take a look at the storm summary data.
 ```
@@ -28,8 +28,6 @@ To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
 source(paste(repo_loc,"charts_all.R", sep = "/"))
 ```
-
-***Max wind speed for storms for all basins***
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/All_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
