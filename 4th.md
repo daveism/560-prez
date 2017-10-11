@@ -18,7 +18,7 @@ You can calculate more summary data by modifying the functions in [clean_data_fu
 
 As an example I converted wind speed to MPH, because it's easier for me to relate to MPH [clean_data_functions.R](clean_data_functions.R#L206).
 
-I also added a field in the hurdata2 data that creates a storm id that uses the year, storm order, and basin to create a numeric value.  This way we can see storms by year in a scatter plot. As an example, the fifth storm in the Atlantic in 1970 would have an id of 197005.1.
+I also added a field in the hurdata2 data that creates a storm id that uses the year, storm order, and basin to create a numeric value.  This way we can see storms by year in a scatter plot. As an example, the fifth storm in the Atlantic in 1970 would have an id of 197005.1 [clean_data_functions.R](clean_data_functions.R#L36-L41)
 
 Now we can investigate  wind speed in several different ways.  
 
