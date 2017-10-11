@@ -5,7 +5,7 @@
 major_meta_hurr <- subset(hurr_meta, hurr_meta$max_category >= 3)
 major_meta_hurr_sort <- arrange(major_meta_hurr,num_id)
 
-major_obs_hurr <- subset(major_obs_hurr, major_obs_hurr$max_category >= 3)
+major_obs_hurr <- subset(hurr_obs, hurr_obs$max_category >= 3)
 major_obs_sort <- arrange(major_obs_hurr,num_id)
 
 #pressure vs wind

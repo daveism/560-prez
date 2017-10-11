@@ -1,4 +1,5 @@
-make_hurricane_track_maps <- function(hurr, tittle, source){
+make_hurricane_track_maps <- function(hur, tittle, source){
+
   storm_max_wind <- aggregate(x=hur$wind_mph, by=list(hur$storm_id),FUN=max)
   storm_min_pressure <- aggregate(x=hur$pressure, by=list(hur$storm_id),FUN=min)
   storm_max_category <- aggregate(x=hur$category, by=list(hur$storm_id),FUN=max, na.rm=TRUE, na.action=NULL)

@@ -85,8 +85,8 @@ ggScatterAutoNoRLimMajor <-  function(data, xField, yField, method, title,
 
 ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
-  storm_min_date <- aggregate(x=hur$date, by=list(hur$storm_id),FUN=min)
-  storm_max_date <- aggregate(x=hur$date, by=list(hur$storm_id),FUN=max)
+  storm_min_date <- aggregate(x=data$date, by=list(data$storm_id),FUN=min)
+  storm_max_date <- aggregate(x=data$date, by=list(data$storm_id),FUN=max)
 
   storm_min_date <- dplyr::rename(storm_min_date,  storm_id = Group.1, min_date = x)
   storm_max_date <- dplyr::rename(storm_max_date,  storm_id = Group.1, max_date = x)
