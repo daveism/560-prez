@@ -85,19 +85,28 @@ ggScatterAutoNoRLimMajor <-  function(data, xField, yField, method, title,
 
 ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
 
+  storm_min_date <- aggregate(x=hur$date, by=list(hur$storm_id),FUN=min)
+  storm_max_date <- aggregate(x=hur$date, by=list(hur$storm_id),FUN=max)
+
+  storm_min_date <- dplyr::rename(storm_min_date,  storm_id = Group.1, min_date = x)
+  storm_max_date <- dplyr::rename(storm_max_date,  storm_id = Group.1, max_date = x)
+
+  storm_min_date$min_date <- format(as.Date(storm_min_date$min_date), format='%b %d, %Y')
+  storm_max_date$max_date <- format(as.Date(storm_max_date$max_date), format='%b %d, %Y')
+
+  storm_datet <- paste("Date: ", paste(storm_min_date$min_date, storm_max_date$max_date , sep=" - ") )
+
+
   ggplot(data) +
-  geom_bar(aes(as.factor(xfield),  yfield),
-            position = "dodge", stat = "summary", fun.y = "max",fill="#b2ddf2", color="#b2ddf2") +
-  # scale_x_discrete(
-  #                 breaks = c(18501.1, 19001.1, 19501.1, 20001.1),
-  #                 labels = c("1850", "1900", "1950", "2000")) +
-  # ggplot(data, aes(x = xfield, y=yfield)) +
-  # geom_bar(stat="summary", fun.y="sum") +
-  # geom_bar(stat = "identity",  position = "dodge") +
-  # geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
+  geom_bar(aes(as.factor(xfield), as.numeric(yfield)),
+            position = "dodge", stat = "summary",
+            fun.y = "max", fill="#b2ddf2", color="#b2ddf2",
+            width=.75) +
+  coord_cartesian(ylim = c(5, 225)) +
+  scale_y_continuous(breaks = seq(0, 225, by = 25)) +
   theme_minimal(base_size=theme_base_size) +
    labs(title= paste(title),
-        subtitle="",
+        subtitle=storm_datet,
         x=xlabel,
         y=ylabel,
         caption=paste("Source:",source)) +
@@ -105,8 +114,10 @@ ggBarTime<- function(data, title, xfield, yfield, xlabel, ylabel, source){
                  plot.caption = element_text(color="#AAAAAA", size=6),
                  axis.text.x=element_text(angle=90, size=3),
                  axis.ticks.x=element_blank(),
+                 panel.grid.major = element_line(colour = "grey10", size=.05),
                panel.grid.minor = element_blank(),
-           panel.background = element_blank())
+           panel.background = element_blank(),
+         panel.border = element_rect(colour = "grey20", fill=NA, size=.25))
 }
 
 ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
@@ -129,11 +140,7 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
   scale_x_discrete(
                   breaks = b_breaks,
                   labels = b_labels) +
-  # geom_line(aes(as.factor(xfield),  yfield)) +
-  # geom_line(aes(as.factor(xfield))) +
-  # geom_smooth(method = "loess") +
-  # geom_smooth(method = "loess", color="#008fd5", se = FALSE) +
-  # , minor_breaks = seq(0, 4.8, 0.1)
+
   theme_minimal(base_size=theme_base_size) +
    labs(title= paste(title),
         subtitle="",
@@ -142,14 +149,7 @@ ggBarMaxAll<- function(data, title, xfield, yfield, xlabel, ylabel, source){
         caption=paste("Source:",source)) +
         theme(plot.subtitle = element_text(color="#666666"),
                  plot.caption = element_text(color="#AAAAAA", size=6),
-                #  axis.text.x=element_blank(),
-                #  axis.ticks.x=element_blank(),
                panel.grid.minor = element_blank(),
-            #  panel.grid.major = element_line(color="grey60"),
            panel.background = element_blank())
 
 }
-
-
-
-  # facet_wrap(reformulate(facet_name), ncol = 5)

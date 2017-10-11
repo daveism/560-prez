@@ -14,9 +14,9 @@ for (huricane in basin_obs_hurr$storm_id){
 
   bar_time_winds <- ggBarTime(
     hur,
-    paste( paste("Winds by Date for", hur$storm_name),  hur$year),
+    paste( paste("Winds speed for", hur$storm_name)),
     hur$date_time,
-    format(hur$wind_mph, digits = 3),
+    format(hur$wind_mph, digits = 0),
     "Date Time",
     "Wind (MPH)",
     "NOAA - Hurrdat2 data"
