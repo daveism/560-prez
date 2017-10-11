@@ -20,7 +20,7 @@ source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 examples:
 ![img alt="Hurricane Matthew Track Map](../master/maps/storm/MATTHEW_AL142016_track_map.png?raw=true)
 
-<img alt="Hurricane Matthew Wind Chart" src="../master/charts/storm/Western_Atlantic_MATTHEW_wind.png?raw=true" width="60%" height="60%" >
+<img alt="Hurricane Matthew Wind Chart" src="../master/charts/storm/Western_Atlantic_MATTHEW_wind.png?raw=true" width="75%" height="75%" >
 
 
 [Previous page](6th.md) | [Next page](last.md)
