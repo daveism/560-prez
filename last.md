@@ -9,7 +9,7 @@ Use this guide to dive into the hurdat2 data or just grab the data:
 - Hurricane summarries: [hurricanes_summary.csv](data/hurricanes_summary.csv)
 
 ## Getting indivdual storms
-Just run the get_storm_data function with a storm id and you get
+To get any storm in the hurdat2 dataset I created a function in this script [make_storm_datasets.R](make_storm_datasets.R).  All you need is the storm id you will get:
 - track map
 - wind chart
 - summary data csv
@@ -20,12 +20,13 @@ for example getting the storm EP202015 aka PATRICIA run this
 ```
 get_storm_data("EP202015")
 ```
+
+and get this
 - [track map](maps/storm/storm_PATRICIA_EP202015_track_map.png)
 - [wind chart](charts/storm/storm_PATRICIA_EP202015_wind_chart.png)
 - [summary data csv](data/storm_EP202015_summary_data.csv)
 - [detail data csv](data/storm_EP202015_detail_data.csv)
 
-and get this
 
 
 ## Charts
