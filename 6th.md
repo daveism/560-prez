@@ -1,7 +1,7 @@
 [First page](1st.md)
 
 [Previous page](5th.md) | [Next page](7th.md)
-## Wind Speed for Intense Hurricanes
+## Max wind speed overtime - Intense Hurricanes
 Maybe the real increase is when hurricanes are intense.  We will define intense hurricanes any storm that is category 3 or higher [NOAA](http://www.nhc.noaa.gov/climo/). 
 
 To create this chart run [charts_intense_all.R](charts_intense_all.R) in R studio.
