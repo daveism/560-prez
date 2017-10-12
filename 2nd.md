@@ -14,10 +14,11 @@ If the Hurdat2 data has changed you will need to update the locations of the two
 ### Update repository
 You will also need to update the location of the downloaded or cloned repository here [run_hurr.R](run_hurr.R#L1).  
 
-
 ```R
-source('THE REPO LOCATION YOU NEED TO UPDATE THIS\560-prez\run_hurr.R')
+repo_loc <- "/Users/daveism/GitHub/560-prez"
 ```
+
+### The scripts and what they do
 The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Sets some variables
 - Install all the packages we need [install.R](install.R)
