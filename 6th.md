@@ -95,9 +95,9 @@ head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
 
-In the Western Atlantic, it looks like max winds of intense hurricans are trending up also.
+In the Western Atlantic, it looks like max winds of intense hurricanes are trending up also.
 
-The top 10 Major Hurricanes for the Eastern Pacific
+The top 10 Major Hurricanes for the Eastern Pacific.
 
 ```
 head(subset(major_meta_hurr, basin == "Eastern Pacific")  %>%  arrange(desc(max_wind_mph)), 10)  %>% select(storm_name,  max_wind_mph, min_pressure, year) 
