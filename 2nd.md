@@ -33,6 +33,13 @@ image_height <- 3
 
 ```
 
+### Run the R scripts
+In R studio run
+
+```r
+source(paste(repo_loc,"run_hurr.R", sep = "/"))
+```
+
 ### The scripts and what they do
 The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Sets some variables
