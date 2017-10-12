@@ -82,7 +82,7 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 
 Looks like a very strong relationship.
 
-We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships in both basins.
+We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships in the individual basins.
 
 To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studio.
 ```
