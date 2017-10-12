@@ -63,8 +63,10 @@ for (thebasin in basins){
   chart_image <- gsub(" ", "_", chart_image)
   ggsave(chart_image, chartWindvsPressure, width=image_width, height=image_height)
 
-}
 
+}
+rm(basin_meta_hurr)
+rm(basin_obs_hurr)
 rm(hurr_meta_sort)
 rm(hurr_obs_sort)
 rm(basins)

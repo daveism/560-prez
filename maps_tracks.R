@@ -31,5 +31,3 @@ for (huricane in basin_meta_hurr$storm_id){
 
 rm(basin_meta_hurr)
 rm(basin_obs_hurr)
-rm(basin_meta_hurr)
-rm(basin_obs_hurr)

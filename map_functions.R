@@ -1,15 +1,11 @@
 make_hurricane_track_maps <- function(hur, tittle, source){
 
-  storm_max_wind <- aggregate(x=hur$wind_mph, by=list(hur$storm_id),FUN=max)
-  storm_min_pressure <- aggregate(x=hur$pressure, by=list(hur$storm_id),FUN=min)
-  storm_max_category <- aggregate(x=hur$category, by=list(hur$storm_id),FUN=max, na.rm=TRUE, na.action=NULL)
+  storm_max_wind <- hur$max_wind_mph
+  storm_min_pressure <- hur$min_pressure
+  storm_max_category <- hur$max_category
 
   storm_min_date <- aggregate(x=hur$date, by=list(hur$storm_id),FUN=min)
   storm_max_date <- aggregate(x=hur$date, by=list(hur$storm_id),FUN=max)
-
-  storm_max_wind <- dplyr::rename(storm_max_wind,  storm_id = Group.1, max_wind_mph = x)
-  storm_min_pressure <- dplyr::rename(storm_min_pressure,  storm_id = Group.1, min_pressure = x)
-  storm_max_category <- dplyr::rename(storm_max_category,  storm_id = Group.1, max_category = x)
 
   storm_min_date <- dplyr::rename(storm_min_date,  storm_id = Group.1, min_date = x)
   storm_max_date <- dplyr::rename(storm_max_date,  storm_id = Group.1, max_date = x)
@@ -19,9 +15,9 @@ make_hurricane_track_maps <- function(hur, tittle, source){
 
   storm_max_category[mapply(is.infinite, storm_max_category)] <- "N/A"
 
-  storm_max_windst <- paste("Max Wind: ", format(storm_max_wind$max_wind_mph, digits = 3))
-  storm_min_pressurest <- paste("Min pressure: ", format(storm_min_pressure$min_pressure, digits = 3))
-  storm_max_categoryt <- paste("Max category: ", storm_max_category$max_category )
+  storm_max_windst <- paste("Max Wind: ", format(storm_max_wind, digits = 3))
+  storm_min_pressurest <- paste("Min pressure: ", format(storm_min_pressure, digits = 3))
+  storm_max_categoryt <- paste("Max category: ", storm_max_category )
   storm_datet <- paste("Date: ", paste(storm_min_date$min_date, storm_max_date$max_date , sep=" - ") )
 
   the_subtitle <- paste(storm_datet, storm_max_windst,  storm_min_pressurest, storm_max_categoryt, sep="\n")
@@ -119,6 +115,7 @@ make_hurricane_track_maps <- function(hur, tittle, source){
             plot.caption = element_text(color="#AAAAAA", size=5),
             panel.border = element_rect(colour = "grey60", fill=NA, size=1))
 
+  rm(hur)
   return(track_map)
 
 }
