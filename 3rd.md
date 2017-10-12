@@ -71,7 +71,7 @@ Multiple R-squared:  0.8919,	Adjusted R-squared:  0.8919
 F-statistic: 2.73e+05 on 1 and 33084 DF,  p-value: < 0.00000000000000022
 ```
 
-Looks like there is a strong relationship, let's look at the the scatter plots.
+Looks like there is a strong relationship, let's look at the scatter plots.
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
