@@ -68,7 +68,7 @@ F-statistic: 337.2 on 1 and 22902 DF,  p-value: < 0.00000000000000022
 ```
 It appears that max winds for intense hurricanse are trending up!
 
-Let's see if there are any differences in the two basins.
+Let's see if there are any differences in the two individual basins.
 
 To create these charts run [charts_intense_all_basins.R](charts_intense_all_basins.R) in R studio.
 ```
