@@ -11,15 +11,15 @@ source(paste(repo_loc,"charts_intense_all.R", sep = "/"))
 
 Then take a look at the intense hurricane data
 ```
+major_meta_hurr <- subset(hurr_meta, hurr_meta$max_category >= 3)
+major_obs_hurr <- subset(hurr_obs, hurr_obs$max_category >= 3)
+
 View(major_meta_hurr)
 View(major_obs_hurr)
 ```
 The top 10 Major Hurricanes
 
 ```
-major_meta_hurr <- subset(hurr_meta, hurr_meta$max_category >= 3)
-major_obs_hurr <- subset(hurr_obs, hurr_obs$max_category >= 3)
-
 head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
 
    storm_name max_wind_mph min_pressure year
