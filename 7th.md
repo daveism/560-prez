@@ -10,8 +10,7 @@ You can run this your self-using [maps_tracks.R](maps_tracks.R).
 source(paste(repo_loc,"maps_tracks.R", sep = "/"))
 ```
 
-Then create a series of graphs showing the date and wind speed (MPH) for storms in the Western Atlantic since 2000.
-You can run this your self using [run_hurr_track_charts.R](run_hurr_track_charts.R) but as a ***warning*** this will take a good amount of time, so grab a drink and sit back.
+Then create a series of graphs showing the date and wind speed (MPH) for storms in the Western Atlantic since 2000. You can run this your self-using [run_hurr_track_charts.R](run_hurr_track_charts.R) but as a ***warning***, this will take a good amount of time, so grab a drink and sit back.
 
 ```
 source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
