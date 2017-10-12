@@ -49,7 +49,7 @@ cor <- lm(formula = hurr_obs$wind_mph ~ hurr_obs$pressure)
 ```
 
 ```
-summary(fit)
+summary(cor)
 
 Call:
 lm(formula = hurr_obs_sort$wind_mph ~ hurr_obs_sort$pressure)
