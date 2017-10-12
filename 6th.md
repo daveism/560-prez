@@ -38,6 +38,7 @@ head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  ma
 
 <img alt="bar charts of max winds for intense storms for all basins" src="../master/charts/All_bar_major_storm_max_wind.png?raw=true" width="60%" height="60%" >
 
+Maybe there is a slight upward trend but it's really hard to tell.
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_major_strom_wind.png?raw=true" width="60%" height="60%" >
 
