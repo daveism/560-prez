@@ -5,6 +5,8 @@
 
 First, you will have to clone or download this repository.
 
+Open R studio and do the following:
+
 ### Update Hurdat2
 If the Hurdat2 data has changed you will need to update the locations of the two files in [get_data.R](get_data.R#L7-L8).  
 
@@ -12,7 +14,6 @@ If the Hurdat2 data has changed you will need to update the locations of the two
 ### Update repository
 You will also need to update the location of the downloaded or cloned repository here [run_hurr.R](run_hurr.R#L1).  
 
-Open R studio
 
 ```R
 source('THE REPO LOCATION YOU NEED TO UPDATE THIS\560-prez\run_hurr.R')
