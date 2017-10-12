@@ -50,7 +50,7 @@ for (thebasin in basins){
 
   Chart_BarYearWind <- ggBarMaxAll(
     basin_meta_hurr,
-    paste("Hurricanes Max Wind by Storm", thebasin, sep = " - "),
+    paste("Max Wind by Storm", thebasin, sep = " - "),
     basin_meta_hurr$num_id,
     basin_meta_hurr$max_wind_mph,
     "Storm",
@@ -83,6 +83,8 @@ for (thebasin in basins){
 
 }
 
+rm(basin_meta_hurr)
+rm(basin_obs_hurr)
 rm(hurr_meta_sort)
 rm(hurr_obs_sort)
 rm(basins)

@@ -57,7 +57,7 @@ ggsave(chart_image, allyearwindZoom, width=image_xwidth, height=image_height)
 
 BarYearWind <- ggBarMaxAll(
   hurr_meta_sort,
-  paste("Hurricanes Max Wind by Storm", ""),
+  paste("Max Wind by Storm", ""),
   hurr_meta_sort$num_id,
   hurr_meta_sort$max_wind_mph,
   "Storm",
