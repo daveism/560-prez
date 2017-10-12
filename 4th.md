@@ -22,7 +22,7 @@ I also added a field in the hurdata2 data that creates a storm id that uses the 
 
 Now we can investigate  wind speed in several different ways.  
 
-Bar charts seem like the simplest way to look at data.  Maybe we can see a trend of increasing max winds trending up over time.  These charts show max wind for each storm regardless of it's max category.  So they include tropical depressions, tropical storms, and hurricanes.
+Bar charts seem like the simplest way to look at data. Maybe we can see a trend of increasing max winds trending up over time. These charts show max wind for each storm regardless of the maximum storm category. So they include tropical depressions, tropical storms, and hurricanes.
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
