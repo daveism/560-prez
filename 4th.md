@@ -42,7 +42,7 @@ source(paste(repo_loc,"charts_basins_all.R", sep = "/"))
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 
-In the Western Atlantic, it looks pretty random.
+In the Western Atlantic, max wind looks pretty random.
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_bar_storm_maxwind.png?raw=true" width="60%" height="60%" >
 

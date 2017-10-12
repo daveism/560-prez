@@ -11,10 +11,13 @@ source(paste(repo_loc,"charts_intense_all.R", sep = "/"))
 
 Then take a look at the intense hurricane data
 ```
+major_meta_hurr <- subset(hurr_meta, hurr_meta$max_category >= 3)
+major_obs_hurr <- subset(hurr_obs, hurr_obs$max_category >= 3)
+
 View(major_meta_hurr)
 View(major_obs_hurr)
 ```
-The top 10 Major Hurricanes
+The top 10 Major Hurricanes by max wind.
 
 ```
 head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
@@ -35,6 +38,7 @@ head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  ma
 
 <img alt="bar charts of max winds for intense storms for all basins" src="../master/charts/All_bar_major_storm_max_wind.png?raw=true" width="60%" height="60%" >
 
+Maybe there is a slight upward trend but it's really hard to tell.
 
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_major_strom_wind.png?raw=true" width="60%" height="60%" >
 
@@ -64,7 +68,7 @@ F-statistic: 337.2 on 1 and 22902 DF,  p-value: < 0.00000000000000022
 ```
 It appears that max winds for intense hurricanse are trending up!
 
-Let's see if there are any differences in the two basins.
+Let's see if there are any differences in the two individual basins.
 
 To create these charts run [charts_intense_all_basins.R](charts_intense_all_basins.R) in R studio.
 ```
@@ -91,7 +95,7 @@ head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
 
-In the Western Atlantic, it looks like max winds of intense hurricans are trending up.  
+In the Western Atlantic, it looks like max winds of intense hurricans are trending up also.
 
 The top 10 Major Hurricanes for the Eastern Pacific
 
@@ -113,9 +117,9 @@ head(subset(major_meta_hurr, basin == "Eastern Pacific")  %>%  arrange(desc(max_
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
 
-In the WesEastern Pacific, it appears max wind are trending up also for intense hurricanes!
+In the Eastern Pacific, it appears max wind are trending up for intense hurricanes also!
 
-Is this Real? Well all the data is ready for you to dig in too, what else can do with scripting.
+Is this Real? Well all the data is ready for you to dig in too, what else can you do with scripting in R?
 
 [Previous page](5th.md) | [Next page](7th.md)
 

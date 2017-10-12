@@ -45,11 +45,11 @@ head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, 
 It looks like some of the same names are on the two lists and we already know pressure and wind should be related. So lets look...
 
 ```
-cor <- lm(formula = hurr_obs_sort$wind_mph ~ hurr_obs_sort$pressure)
+cor <- lm(formula = hurr_obs$wind_mph ~ hurr_obs$pressure)
 ```
 
 ```
-summary(fit)
+summary(cor)
 
 Call:
 lm(formula = hurr_obs_sort$wind_mph ~ hurr_obs_sort$pressure)
@@ -71,7 +71,7 @@ Multiple R-squared:  0.8919,	Adjusted R-squared:  0.8919
 F-statistic: 2.73e+05 on 1 and 33084 DF,  p-value: < 0.00000000000000022
 ```
 
-Looks a strong relationship exists, let's look at the the scatter plots.
+Looks like there is a strong relationship, let's look at the the scatter plots.
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
@@ -82,7 +82,7 @@ source(paste(repo_loc,"charts_all.R", sep = "/"))
 
 Looks like a very strong relationship.
 
-We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships in both basins.
+We downloaded both the Western Atlantic and Eastern Pacific basins.  Let's make sure we see the same relationships in the individual basins.
 
 To create these charts run [charts_basins_all.R](charts_basins_all.R) in R studio.
 ```

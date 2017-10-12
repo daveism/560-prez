@@ -28,7 +28,7 @@ In the Western Atlantic, it appears max winds are trending down?
 
 In the Eastern Pacific, it appears max winds are trending slightly up?
 
-Maybe all the storms that never became intense hurricanse are masking what we are looking for? Are intense storms getting more intense. Next up a max winds of intense hurricanes.
+Maybe all the storms that never became intense hurricanse are masking what we are looking for? Are intense storms getting more intense. Next up max winds of intense hurricanes.
 
 [Previous page](4th.md) | [Next page](6th.md)
 
