@@ -2,7 +2,7 @@
 
 [Previous page](4th.md) | [Next page](6th.md)
 ## Max wind speed overtime - Scatter Plots
-Bar charts are great, but maybe a scatter plot will reveal something we can't see in the bar charts.  Again the data plotted includes the max wind for each storm which includes tropical depressions, tropical storms, and hurricanes.
+Bar charts are great, but maybe a scatter plot will reveal something we can't see in the bar charts.  Again the data plotted includes the max wind for each storm and includes tropical depressions, tropical storms, and hurricanes.
 
 To create this chart run [charts_all.R](charts_all.R) in R studio.
 ```
