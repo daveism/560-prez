@@ -119,7 +119,7 @@ head(subset(major_meta_hurr, basin == "Eastern Pacific")  %>%  arrange(desc(max_
 
 In the Eastern Pacific, it appears max wind are trending up for intense hurricanes also!
 
-Is this Real? Well all the data is ready for you to dig in too, what else can do with scripting.
+Is this Real? Well all the data is ready for you to dig in too, what else can you do with scripting.
 
 [Previous page](5th.md) | [Next page](7th.md)
 
