@@ -5,13 +5,11 @@
 
 First, you will have to clone or download this repository.
 
-***Update Hurdat2***
-
+### Update Hurdat2
 If the Hurdat2 data has changed you will need to update the locations of the two files in [get_data.R](get_data.R#L7-L8).  
 
 
-***Update repo***
-
+### Update repository
 You will also need to update the location of the downloaded or cloned repository here [run_hurr.R](run_hurr.R#L1).  
 
 Open R studio
@@ -39,7 +37,7 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 
 ---
 
-The following creats maps and charts are not run automatically!  You will want to run this separately and it takes a **LONG** time to run, so if you have the time...
+The following creates maps and charts are not run automatically!  You will want to run this separately and it takes a **LONG** time to run, so if you have the time...
 - Create track maps  [run_hurr_track_charts.R](run_hurr_track_charts.R).  
 - Create Strom Wind graphs [run_hurr_track_charts.R](run_hurr_track_charts.R).
 

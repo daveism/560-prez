@@ -8,7 +8,7 @@ The following uses R and Github to import, clean, and investigate data associate
 ## A little backgound
 
 NOAA's National Hurricane Center publishes historical hurricane data in the hurdat2 format.
-The complete list of available data is here;
+The complete list of available data is here:
 http://www.aoml.noaa.gov/hrd/hurdat/Data_Storm.html
 
 The Official documentation for the hurdat2 format can be found at   http://www.aoml.noaa.gov/hrd/hurdat/newhurdat-format.pdf.
