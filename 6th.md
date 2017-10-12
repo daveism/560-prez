@@ -17,7 +17,7 @@ major_obs_hurr <- subset(hurr_obs, hurr_obs$max_category >= 3)
 View(major_meta_hurr)
 View(major_obs_hurr)
 ```
-The top 10 Major Hurricanes
+The top 10 Major Hurricanes by max wind.
 
 ```
 head(arrange(major_meta_hurr, desc(max_wind_mph)),10) %>% select(storm_name,  max_wind_mph, min_pressure, year)
