@@ -14,8 +14,23 @@ If the Hurdat2 data has changed you will need to update the locations of the two
 ### Update repository
 You will also need to update the location of the downloaded or cloned repository here [run_hurr.R](run_hurr.R#L1).  
 
+Once updated, copy and paste the first 14 lines so the interactive pieces on this guide work properly [run_hurr.R](https://github.com/daveism/560-prez/blob/master/run_hurr.R#L1:L14).
+
 ```R
 repo_loc <- "/Users/daveism/GitHub/560-prez"
+
+maps_dir <- paste(repo_loc,"maps", sep = "/")
+maps_storm_dir <- paste(repo_loc,"maps","storm", sep = "/")
+charts_dir <- paste(repo_loc,"charts", sep = "/")
+charts_storm_dir <- paste(repo_loc,"charts","storm", sep = "/")
+data_dir <- paste(repo_loc,"data", sep = "/")
+
+#image defaults
+theme_base_size <- 9
+image_width <- 4
+image_xwidth <- 5
+image_height <- 3
+
 ```
 
 ### The scripts and what they do
