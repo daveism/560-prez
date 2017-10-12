@@ -4,7 +4,7 @@
 ## Hurricane Tracks
 For all of you that geek out on hurricanes. Let's generate a series of maps and charts of storm tracks for the Western Atlantic since 2000.
 
-You can run this your self using [maps_tracks.R](maps_tracks.R)
+You can run this your self-using [maps_tracks.R](maps_tracks.R).
 
 ```
 source(paste(repo_loc,"maps_tracks.R", sep = "/"))
