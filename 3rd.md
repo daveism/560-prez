@@ -42,7 +42,7 @@ head(arrange(hurr_meta, min_pressure),10) %>% select(storm_name,  max_wind_mph, 
 ```
 
 
-It looks like some of the same names are on the two lists and we already know pressure and wind should be related. So lets look...
+It looks like some of the same names are on the two lists and I already know pressure and wind should be related. So lets look...
 
 ```
 cor <- lm(formula = hurr_obs$wind_mph ~ hurr_obs$pressure)
