@@ -102,7 +102,9 @@ head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max
 major_meta_hurr_wa <- subset(hurr_meta, hurr_meta$max_category >= 3 &  hurr_meta$basin == "Western Atlantic")
 major_obs_hurr_wa <- subset(hurr_obs, hurr_obs$max_category >= 3 &  hurr_obs$basin == "Western Atlantic")
 
-cor <- lm(formula = major_obs_hurr_wa$max_wind_mph ~major_obs_hurr_wa$num_id)
+cor <- lm(formula = major_obs_hurr_wa$max_wind_mph ~ major_obs_hurr_wa$num_id)
+
+summary(cor)
 
 Call:
 lm(formula = major_obs_hurr_wa$max_wind_mph ~ major_obs_hurr_wa$num_id)
@@ -147,6 +149,34 @@ head(subset(major_meta_hurr, basin == "Eastern Pacific")  %>%  arrange(desc(max_
 ```
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
+
+```
+major_meta_hurr_ep <- subset(hurr_meta, hurr_meta$max_category >= 3 &  hurr_meta$basin == "Eastern Pacific")
+major_obs_hurr_ep <- subset(hurr_obs, hurr_obs$max_category >= 3 &  hurr_obs$basin == "Eastern Pacific")
+
+cor <- lm(formula = major_meta_hurr_ep$max_wind_mph ~ major_meta_hurr_ep$num_id)
+
+summary(cor)
+
+Call:
+lm(formula = major_meta_hurr_ep$max_wind_mph ~ major_meta_hurr_ep$num_id)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-25.636 -13.159  -1.412   9.363  72.608 
+
+Coefficients:
+                              Estimate   Std. Error t value Pr(>|t|)   
+(Intercept)               -341.2790420  144.0333828  -2.369  0.01870 * 
+major_meta_hurr_ep$num_id    0.0023902    0.0007227   3.307  0.00111 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 15.42 on 214 degrees of freedom
+Multiple R-squared:  0.04862,	Adjusted R-squared:  0.04418 
+F-statistic: 10.94 on 1 and 214 DF,  p-value: 0.001106
+
+```
 
 In the Eastern Pacific, it appears max winds is trending up for intense hurricanes also!
 
