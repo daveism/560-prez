@@ -64,8 +64,6 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 16.06 on 524 degrees of freedom
 Multiple R-squared:  0.05232,	Adjusted R-squared:  0.05051 
 F-statistic: 28.93 on 1 and 524 DF,  p-value: 0.0000001134
-
-
 ```
 It appears that max winds for intense hurricanes are trending up!
 
@@ -122,7 +120,6 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 16.39 on 308 degrees of freedom
 Multiple R-squared:  0.06875,	Adjusted R-squared:  0.06572 
 F-statistic: 22.74 on 1 and 308 DF,  p-value: 0.00000287
-
 ```
 
 
@@ -173,7 +170,6 @@ Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’
 Residual standard error: 15.42 on 214 degrees of freedom
 Multiple R-squared:  0.04862,	Adjusted R-squared:  0.04418 
 F-statistic: 10.94 on 1 and 214 DF,  p-value: 0.001106
-
 ```
 
 In the Eastern Pacific, it appears max winds is trending up for intense hurricanes also!
