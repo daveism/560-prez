@@ -43,28 +43,27 @@ It's hard to tell, but there might be a slight upward trend.
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_major_strom_wind.png?raw=true" width="60%" height="60%" >
 
 ```
-cor <- lm(formula = major_obs_hurr$max_wind_mph ~ major_obs_hurr$num_id)
+cor <- lm(formula = major_meta_hurr$max_wind_mph ~ major_meta_hurr$num_id)
 
 summary(cor)
 
-
 Call:
-lm(formula = major_obs_hurr$max_wind_mph ~ major_obs_hurr$num_id)
+lm(formula = major_meta_hurr$max_wind_mph ~ major_meta_hurr$num_id)
 
 Residuals:
-   Min     1Q Median     3Q    Max 
--24.95 -11.77  -1.76  10.06  73.15 
+    Min      1Q  Median      3Q     Max 
+-23.420 -10.957  -3.396   8.095  74.673 
 
 Coefficients:
-                          Estimate   Std. Error t value            Pr(>|t|)    
-(Intercept)           -45.66956615   5.13244163  -8.898 <0.0000000000000002 ***
-major_obs_hurr$num_id   0.00092061   0.00002608  35.301 <0.0000000000000002 ***
+                          Estimate  Std. Error t value    Pr(>|t|)    
+(Intercept)            -43.5272989  33.0155368  -1.318       0.188    
+major_meta_hurr$num_id   0.0009024   0.0001678   5.378 0.000000113 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 16.3 on 22902 degrees of freedom
-Multiple R-squared:  0.05161,	Adjusted R-squared:  0.05156 
-F-statistic:  1246 on 1 and 22902 DF,  p-value: < 0.00000000000000022
+Residual standard error: 16.06 on 524 degrees of freedom
+Multiple R-squared:  0.05232,	Adjusted R-squared:  0.05051 
+F-statistic: 28.93 on 1 and 524 DF,  p-value: 0.0000001134
 
 
 ```
@@ -102,28 +101,27 @@ head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max
 major_meta_hurr_wa <- subset(hurr_meta, hurr_meta$max_category >= 3 &  hurr_meta$basin == "Western Atlantic")
 major_obs_hurr_wa <- subset(hurr_obs, hurr_obs$max_category >= 3 &  hurr_obs$basin == "Western Atlantic")
 
-cor <- lm(formula = major_obs_hurr_wa$max_wind_mph ~ major_obs_hurr_wa$num_id)
+cor <- lm(formula = major_meta_hurr_wa$max_wind_mph ~ major_meta_hurr_wa$num_id)
 
 summary(cor)
 
 Call:
-lm(formula = major_obs_hurr_wa$max_wind_mph ~ major_obs_hurr_wa$num_id)
+lm(formula = major_meta_hurr_wa$max_wind_mph ~ major_meta_hurr_wa$num_id)
 
 Residuals:
-   Min     1Q Median     3Q    Max 
--25.92 -12.29  -2.43  10.05  52.57 
+    Min      1Q  Median      3Q     Max 
+-24.831 -11.332  -3.777   8.843  53.719 
 
 Coefficients:
-                             Estimate   Std. Error t value            Pr(>|t|)    
-(Intercept)              -53.81342304   6.12229645   -8.79 <0.0000000000000002 ***
-major_obs_hurr_wa$num_id   0.00096585   0.00003136   30.80 <0.0000000000000002 ***
+                             Estimate  Std. Error t value   Pr(>|t|)    
+(Intercept)               -58.2834916  40.1851285  -1.450      0.148    
+major_meta_hurr_wa$num_id   0.0009826   0.0002061   4.768 0.00000287 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 16.62 on 14295 degrees of freedom
-Multiple R-squared:  0.06224,	Adjusted R-squared:  0.06218 
-F-statistic: 948.9 on 1 and 14295 DF,  p-value: < 0.00000000000000022
-
+Residual standard error: 16.39 on 308 degrees of freedom
+Multiple R-squared:  0.06875,	Adjusted R-squared:  0.06572 
+F-statistic: 22.74 on 1 and 308 DF,  p-value: 0.00000287
 
 ```
 
