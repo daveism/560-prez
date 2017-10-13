@@ -15,6 +15,6 @@ The Official documentation for the hurdat2 format can be found at   http://www.a
 
 *Note: When this data is updated, the file name is also updated and the old file is no longer available.*
 
-So you **MAY** have to update locations to both the western Atlantic and eastern Pacific - [get_data.R](get_data.R#L7-L8)
+So you **MAY** have to update locations to the hurdat2 text files for both the western Atlantic and eastern Pacific - [get_data.R](get_data.R#L7-L8)
 
 [Next page](2nd.md)
