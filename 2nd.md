@@ -3,7 +3,7 @@
 [Previous page](start.md) | [Next page](3rd.md)
 ## Getting Started
 
-First, you will have to [clone](x-github-client://openRepo/https://github.com/daveism/560-prez) or [download](https://github.com/daveism/560-prez/archive/master.zip) this repository.
+First, you will have to [clone](https://github.com/daveism/560-prez) or [download](https://github.com/daveism/560-prez/archive/master.zip) this repository.
 
 Open R studio and do the following:
 
