@@ -97,6 +97,35 @@ head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
 
+
+```
+major_meta_hurr_wa <- subset(hurr_meta, hurr_meta$max_category >= 3 &  hurr_meta$basin == "Western Atlantic")
+major_obs_hurr_wa <- subset(hurr_obs, hurr_obs$max_category >= 3 &  hurr_obs$basin == "Western Atlantic")
+
+cor <- lm(formula = major_obs_hurr_wa$max_wind_mph ~major_obs_hurr_wa$num_id)
+
+Call:
+lm(formula = major_obs_hurr_wa$max_wind_mph ~ major_obs_hurr_wa$num_id)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-25.92 -12.29  -2.43  10.05  52.57 
+
+Coefficients:
+                             Estimate   Std. Error t value            Pr(>|t|)    
+(Intercept)              -53.81342304   6.12229645   -8.79 <0.0000000000000002 ***
+major_obs_hurr_wa$num_id   0.00096585   0.00003136   30.80 <0.0000000000000002 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 16.62 on 14295 degrees of freedom
+Multiple R-squared:  0.06224,	Adjusted R-squared:  0.06218 
+F-statistic: 948.9 on 1 and 14295 DF,  p-value: < 0.00000000000000022
+
+
+```
+
+
 In the Western Atlantic, it looks like max winds of intense hurricanes are trending up also.
 
 The top 10 Major Hurricanes for the Eastern Pacific.
