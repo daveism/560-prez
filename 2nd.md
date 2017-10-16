@@ -1,6 +1,6 @@
 [First page](1st.md)
 
-[Previous page](start.md) | [Next page](3rd.md)
+[Previous page](1st.md) | [Next page](3rd.md)
 ## Getting Started
 
 First, you will have to [clone](https://github.com/daveism/560-prez) or [download](https://github.com/daveism/560-prez/archive/master.zip) this repository.
@@ -76,6 +76,6 @@ source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 ```
 
-[Previous page](start.md) | [Next page](3rd.md)
+[Previous page](1st.md) | [Next page](3rd.md)
 
 [Last page](last.md)
