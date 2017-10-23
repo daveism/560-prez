@@ -51,12 +51,12 @@ The [run_hurr.R](run_hurr.R) script will do a whole lot of things for us.
 - Load functions to create individual storm map, chart and data [make_storm_datasets.R](make_storm_datasets.R)
 - Write CSV data [write_csv.R](write_csv.R)
 - Create charts
-  - [charts_all.R]()
-  - [charts_basins_all.R]()
-  - [charts_all_1950.R]()
-  - [charts_basins_all_1950.R]()
-  - [charts_intense_all.R]()
-  - [charts_intense_all_basins.R]()
+  - [charts_all.R](charts_all.R)
+  - [charts_basins_all.R](charts_basins_all.R)
+  - [charts_all_1950.R](charts_all_1950.R)
+  - [charts_basins_all_1950.R](charts_basins_all_1950.R)
+  - [charts_intense_all.R](charts_intense_all.R)
+  - [charts_intense_all_basins.R](charts_intense_all_basins.R)
 
 
 ---
