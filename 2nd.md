@@ -1,9 +1,9 @@
 [First page](1st.md)
 
-[Previous page](start.md) | [Next page](3rd.md)
+[Previous page](1st.md) | [Next page](3rd.md)
 ## Getting Started
 
-First, you will have to clone or download this repository.
+First, you will have to [clone](https://github.com/daveism/560-prez) or [download](https://github.com/daveism/560-prez/archive/master.zip) this repository.
 
 Open R studio and do the following:
 
@@ -17,7 +17,7 @@ You will also need to update the location of the downloaded or cloned repository
 Once updated, copy and paste the first 14 lines so the interactive pieces on this guide work properly [run_hurr.R](https://github.com/daveism/560-prez/blob/master/run_hurr.R#L1:L14).
 
 ```r
-repo_loc <- "/Users/daveism/GitHub/560-prez"
+repo_loc <- "/Update to location of the repository on your computer/560-prez"
 
 maps_dir <- paste(repo_loc,"maps", sep = "/")
 maps_storm_dir <- paste(repo_loc,"maps","storm", sep = "/")
@@ -76,6 +76,6 @@ source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 source(paste(repo_loc,"run_hurr_track_charts.R", sep = "/"))
 ```
 
-[Previous page](start.md) | [Next page](3rd.md)
+[Previous page](1st.md) | [Next page](3rd.md)
 
 [Last page](last.md)

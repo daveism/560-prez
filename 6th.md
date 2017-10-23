@@ -43,28 +43,27 @@ It's hard to tell, but there might be a slight upward trend.
 <img alt="Max wind speed for storms for all basins" src="../master/charts/all_scatter_major_strom_wind.png?raw=true" width="60%" height="60%" >
 
 ```
-cor <- lm(formula = major_obs_hurr$wind_mph ~ major_obs_hurr$num_id)
+cor <- lm(formula = major_meta_hurr$max_wind_mph ~ major_meta_hurr$num_id)
 
 summary(cor)
 
 Call:
-lm(formula = major_obs_hurr$wind_mph ~ major_obs_hurr$num_id)
+lm(formula = major_meta_hurr$max_wind_mph ~ major_meta_hurr$num_id)
 
 Residuals:
     Min      1Q  Median      3Q     Max 
--64.475 -30.551  -2.004  27.284 139.383 
+-23.420 -10.957  -3.396   8.095  74.673 
 
 Coefficients:
-                          Estimate   Std. Error t value            Pr(>|t|)    
-(Intercept)           279.94357510  10.97974353   25.50 <0.0000000000000002 ***
-major_obs_hurr$num_id  -0.00102440   0.00005579  -18.36 <0.0000000000000002 ***
+                          Estimate  Std. Error t value    Pr(>|t|)    
+(Intercept)            -43.5272989  33.0155368  -1.318       0.188    
+major_meta_hurr$num_id   0.0009024   0.0001678   5.378 0.000000113 ***
 ---
 Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 
-Residual standard error: 34.86 on 22902 degrees of freedom
-Multiple R-squared:  0.01451,	Adjusted R-squared:  0.01447 
-F-statistic: 337.2 on 1 and 22902 DF,  p-value: < 0.00000000000000022
-
+Residual standard error: 16.06 on 524 degrees of freedom
+Multiple R-squared:  0.05232,	Adjusted R-squared:  0.05051 
+F-statistic: 28.93 on 1 and 524 DF,  p-value: 0.0000001134
 ```
 It appears that max winds for intense hurricanes are trending up!
 
@@ -95,6 +94,35 @@ head(subset(major_meta_hurr, basin == "Western Atlantic")  %>%  arrange(desc(max
 
 <img alt="Max wind speed for storms for Western Atlantic" src="../master/charts/Western_Atlantic_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
 
+
+```
+major_meta_hurr_wa <- subset(hurr_meta, hurr_meta$max_category >= 3 &  hurr_meta$basin == "Western Atlantic")
+major_obs_hurr_wa <- subset(hurr_obs, hurr_obs$max_category >= 3 &  hurr_obs$basin == "Western Atlantic")
+
+cor <- lm(formula = major_meta_hurr_wa$max_wind_mph ~ major_meta_hurr_wa$num_id)
+
+summary(cor)
+
+Call:
+lm(formula = major_meta_hurr_wa$max_wind_mph ~ major_meta_hurr_wa$num_id)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-24.831 -11.332  -3.777   8.843  53.719 
+
+Coefficients:
+                             Estimate  Std. Error t value   Pr(>|t|)    
+(Intercept)               -58.2834916  40.1851285  -1.450      0.148    
+major_meta_hurr_wa$num_id   0.0009826   0.0002061   4.768 0.00000287 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 16.39 on 308 degrees of freedom
+Multiple R-squared:  0.06875,	Adjusted R-squared:  0.06572 
+F-statistic: 22.74 on 1 and 308 DF,  p-value: 0.00000287
+```
+
+
 In the Western Atlantic, it looks like max winds of intense hurricanes are trending up also.
 
 The top 10 Major Hurricanes for the Eastern Pacific.
@@ -116,6 +144,33 @@ head(subset(major_meta_hurr, basin == "Eastern Pacific")  %>%  arrange(desc(max_
 ```
 
 <img alt="Max wind speed for storms for Eastern Pacific" src="../master/charts/Eastern_Pacific_scatter_major_storm_wind.png?raw=true" width="60%" height="60%" >
+
+```
+major_meta_hurr_ep <- subset(hurr_meta, hurr_meta$max_category >= 3 &  hurr_meta$basin == "Eastern Pacific")
+major_obs_hurr_ep <- subset(hurr_obs, hurr_obs$max_category >= 3 &  hurr_obs$basin == "Eastern Pacific")
+
+cor <- lm(formula = major_meta_hurr_ep$max_wind_mph ~ major_meta_hurr_ep$num_id)
+
+summary(cor)
+
+Call:
+lm(formula = major_meta_hurr_ep$max_wind_mph ~ major_meta_hurr_ep$num_id)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-25.636 -13.159  -1.412   9.363  72.608 
+
+Coefficients:
+                              Estimate   Std. Error t value Pr(>|t|)   
+(Intercept)               -341.2790420  144.0333828  -2.369  0.01870 * 
+major_meta_hurr_ep$num_id    0.0023902    0.0007227   3.307  0.00111 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 15.42 on 214 degrees of freedom
+Multiple R-squared:  0.04862,	Adjusted R-squared:  0.04418 
+F-statistic: 10.94 on 1 and 214 DF,  p-value: 0.001106
+```
 
 In the Eastern Pacific, it appears max winds is trending up for intense hurricanes also!
 
